@@ -52,9 +52,9 @@ const AboutHome = () => {
         ref={textRef}
         className="
           max-w-6xl mx-auto
-          font-display
+           font-cormorant
           text-xl sm:text-2xl md:text-3xl lg:text-4xl
-          font-bold
+          font-medium
           leading-snug sm:leading-normal
           text-center
           text-black

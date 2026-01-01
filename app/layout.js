@@ -1,26 +1,34 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals/globals.css";
+import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
 import localFont from "next/font/local";
+import "./globals/globals.css";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const amstelvar = localFont({
-  src: "../public/fonts/AmstelvarAlpha-VF.ttf",
-  variable: "--font-amstelvar",
-  display: "swap",
-});
-const monaSans = localFont({
-  src: "../public/fonts/MonaSans-Black.woff2",
-  variable: "--font-mona",
-  display: "swap",
-});
-
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+/* ✅ CORRECT: Mona Sans Variable */
+const monaSans = localFont({
+  src: [
+    {
+      path: "../public/fonts/MonaSans-Black.woff2",
+      weight: "200 900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-mona",
+  display: "swap",
 });
 
 export const metadata = {
@@ -32,7 +40,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          ${geistSans.variable}
+          ${geistMono.variable}
+          ${monaSans.variable}
+          ${cormorant.variable}
+          antialiased
+        `}
       >
         {children}
       </body>

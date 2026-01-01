@@ -21,50 +21,96 @@ export default function HomeBanner() {
   const rightTextRef = useRef(null);
   const leftFeatureRef = useRef(null);
   const watchRef = useRef(null);
+  const leftArrowRef = useRef(null);
+  const rightArrowRef = useRef(null);
 
   useEffect(() => {
     if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-      /* ───────────── INTRO ANIMATION ───────────── */
       const tl = gsap.timeline({
         defaults: { ease: "power3.out" },
       });
 
-      tl.from(titleRef.current, {
-        y: 60,
+      /* ───────── WATCH FIRST ───────── */
+      tl.from(watchRef.current, {
+        x: 120,
         opacity: 0,
-        duration: 1,
+        duration: 1.3,
       })
+
+        /* ───────── ARROWS AFTER WATCH ───────── */
+        .from(
+          leftArrowRef.current,
+          {
+            x: 40,
+            opacity: 0,
+            duration: 0.6,
+          },
+          "-=0.6"
+        )
+        .from(
+          rightArrowRef.current,
+          {
+            x: -40,
+            opacity: 0,
+            duration: 0.6,
+          },
+          "-=0.6"
+        )
+
+        /* ───────── SIDE FEATURES ───────── */
+        .from(
+          leftFeatureRef.current,
+          {
+            x: -40,
+            opacity: 0,
+            duration: 0.7,
+          },
+          "-=0.3"
+        )
+        .from(
+          rightTextRef.current,
+          {
+            x: 40,
+            opacity: 0,
+            duration: 0.7,
+          },
+          "-=0.6"
+        )
+
+        /* ───────── MAIN TEXT LAST ───────── */
+        .from(
+          titleRef.current,
+          {
+            x: -60,
+            opacity: 0,
+            duration: 0.9,
+          },
+          "-=0.3"
+        )
         .from(
           descRef.current,
-          { y: 40, opacity: 0, duration: 0.8 },
+          {
+            x: -40,
+            opacity: 0,
+            duration: 0.7,
+          },
           "-=0.6"
         )
         .from(
           buttonRef.current,
-          { y: 30, opacity: 0, duration: 0.6 },
-          "-=0.4"
-        )
-        .from(
-          rightTextRef.current,
-          { y: 40, opacity: 0, duration: 0.8 },
-          "-=0.3"
-        )
-        .from(
-          watchRef.current,
-          { x: 120, opacity: 0, duration: 1.2 },
-          "-=0.4"
-        )
-        .from(
-          leftFeatureRef.current,
-          { y: 40, opacity: 0, duration: 0.8 },
-          "-=0.6"
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.6,
+          },
+          "-=0.5"
         );
 
-      /* ───────────── WATCH PARALLAX ───────────── */
+      /* ───────── PARALLAX ───────── */
       gsap.to(watchRef.current, {
-        y: -40,
+        y: 0,
         ease: "none",
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -83,41 +129,40 @@ export default function HomeBanner() {
       ref={sectionRef}
       className="relative min-h-screen overflow-hidden text-white"
     >
-      {/* BACKGROUND IMAGE */}
+      {/* BACKGROUND */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/home/Bg.png')" }}
       />
-
-      {/* COLOR OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#083654]/90 via-[#06283D]/90 to-[#031A2A]/95" />
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 pt-24 lg:pt-32 grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 pt-24 lg:pt-32 flex ">
         {/* LEFT TEXT */}
-        <div className="space-y-6">
+        <div className="space-y-6  w-[55%] mt-10" >
           <h1
             ref={titleRef}
-            className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-display leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl xl:text-5xl font-serif leading-tight"
           >
-            A World Time Watch Inspired <br className="hidden sm:block" />
+            A World Time Watch Inspired
             by Global Beaches
           </h1>
 
-          <p ref={descRef} className="max-w-md text-gray-300">
+          <p ref={descRef} className="max-w-md font-Monasans font-light text-[24px] text-gray-300">
             Crafted for explorers, dreamers, and lovers of the world’s most
             iconic beaches
           </p>
 
           <button
-            className="px-6 py-3 rounded-full  text-white border-white border font-medium hover:scale-105 transition"
+            
+            className="px-6 py-3 rounded-full text-black bg-white border border-white font-medium hover:scale-105 transition"
           >
             Pre-Order Now
           </button>
         </div>
 
         {/* RIGHT TEXT */}
-        <div className="relative hidden lg:block">
+        <div className="relative  hidden lg:block w-[45%]">
           <div
             ref={rightTextRef}
             className="absolute top-24 right-0 max-w-xs"
@@ -130,17 +175,23 @@ export default function HomeBanner() {
         </div>
       </div>
 
-      {/* LEFT ARROW IMAGE */}
-      <div className="absolute top-[25%] right-[23%] hidden lg:block z-10">
+      {/* LEFT ARROW */}
+      <div
+        ref={leftArrowRef}
+        className="absolute top-[25%] right-[23%] hidden lg:block z-10"
+      >
         <Image src={LeftArrow} alt="Left Arrow" />
       </div>
 
-      {/* RIGHT ARROW IMAGE */}
-      <div className="absolute bottom-[18%] left-[30%] hidden lg:block z-10">
+      {/* RIGHT ARROW */}
+      <div
+        ref={rightArrowRef}
+        className="absolute bottom-[18%] left-[30%] hidden lg:block z-10"
+      >
         <Image src={RightArrow} alt="Right Arrow" />
       </div>
 
-      {/* WATCH IMAGE */}
+      {/* WATCH */}
       <div
         ref={watchRef}
         className="absolute bottom-0 right-0 w-[100%] sm:w-[85%] lg:w-[55%] z-10"

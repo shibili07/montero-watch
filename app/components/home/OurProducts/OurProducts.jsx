@@ -65,23 +65,36 @@ const OurProducts = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen bg-white flex flex-col justify-center py-24"
+      className="relative min-h-screen bg-white flex flex-col justify-center py-24 px-4 md:px-8"
     >
       {/* TOP LABEL */}
       <HomeButton text="Our Products" />
 
       {/* TITLE */}
-      {/* <div className="max-w-4xl mx-auto text-center space-y-5 px-4 mt-16">
-        <h2 className="font-display font-bold text-3xl md:text-4xl">
+      <div ref={titleRef} className="max-w-4xl mx-auto text-center">
+        <h1 className="font-cormorant font-normal text-[48px] md:text-[61px] leading-[130%] tracking-tightest">
           Choose Your Montero Edition
-        </h2>
-        <p className="text-lg text-gray-600">
-          Montero is available in two collectible editions — each designed with
-          its own identity while sharing the same world-time DNA and craftsmanship.
-        </p>
-      </div> */}
+        </h1>
 
-      <HOmeTittle title={"Choose Your Montero Edition"} description={"Montero is available in two collectible editions — each designed with its own identity while sharing the same world-time DNA and craftsmanship."}  />
+<p className="
+  mt-6
+  font-mona
+  text-[22px] md:text-[24px]
+  leading-[170%]
+  tracking-[0.015em]
+  text-gray-700
+  text-center
+  max-w-3xl
+  mx-auto
+">
+  Montero is available in two collectible editions — each designed with its own
+  identity while sharing the same world-time DNA and craftsmanship.
+</p>
+
+
+
+
+      </div>
 
       {/* CTA */}
       <div className="flex justify-center mt-8">
@@ -96,19 +109,16 @@ const OurProducts = () => {
       {/* PRODUCT GRID */}
       <div
         ref={contentRef}
-        className="max-w-7xl mx-auto  w-full "
+        className="max-w-7xl mx-auto w-full mt-16"
       >
-        <div className="flex justify-between gap-16 ">
+        <div className="flex flex-col md:flex-row justify-between gap-16">
           {/* LEFT PRODUCT */}
-          <div className="product-item  grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+          <div className="product-item grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             {/* TEXT */}
-            <div className="space-y-3">
-              <h3 className="text-2xl font-semibold">
-                English Edition
-              </h3>
+            <div className="space-y-3 text-center md:text-left">
+              <h3 className="text-2xl font-semibold">English Edition</h3>
               <p className="text-gray-600">
-                A refined international version with a crisp white & blue dial
-                inspired by modern minimalism.
+                A refined international version with a crisp white & blue dial inspired by modern minimalism.
               </p>
             </div>
 
@@ -124,7 +134,7 @@ const OurProducts = () => {
           </div>
 
           {/* RIGHT PRODUCT */}
-          <div className="product-item grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+          <div className="product-item grid grid-cols-1 md:grid-cols-2 items-center gap-8 mt-12 md:mt-0">
             {/* IMAGE */}
             <div className="flex justify-center md:justify-start order-2 md:order-1">
               <Image
@@ -136,13 +146,10 @@ const OurProducts = () => {
             </div>
 
             {/* TEXT */}
-            <div className="space-y-3 order-1 md:order-2">
-              <h3 className="text-2xl font-semibold">
-                Arabic Edition
-              </h3>
+            <div className="space-y-3 order-1 md:order-2 text-center md:text-left">
+              <h3 className="text-2xl font-semibold">Arabic Edition</h3>
               <p className="text-gray-600">
-                A bold blue dial with Eastern Arabic numerals inspired by regional
-                identity and oceanic depth.
+                A bold blue dial with Eastern Arabic numerals inspired by regional identity and oceanic depth.
               </p>
             </div>
           </div>
