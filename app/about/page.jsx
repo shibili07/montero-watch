@@ -5,6 +5,9 @@ import Image from "next/image";
 import Navbar from "../components/navBar/NavBar";
 import Footer from "../components/home/Footer/Footer";
 
+// ICONS
+import { FaInstagram, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
+
 import About1 from "@/public/images/About/about1.jpg";
 import About2 from "@/public/images/About/about2.jpg";
 import About3 from "@/public/images/About/about3.jpg";
@@ -122,14 +125,25 @@ export default function Page() {
           </div>
 
           <div className="mt-16 flex gap-6 overflow-x-auto pb-4">
+
+            {/* INFO CARD WITH ICONS */}
             <div className="min-w-[300px] bg-[#0f1e33] p-8 text-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 animate-slide-in-up">
               <h3 className="font-cormorant text-xl">Della R. Thomas</h3>
-              <p className=" text-sm opacity-80">CEO</p>
-              <p className=" mt-6 text-sm opacity-70">
-                Each beach was chosen for its cultural significance, beauty, and global reputation — together forming the emotional core of Montero.
-Each beach was chosen for its cultural significance, beauty, and global reputation — together forming the emotional core of Montero.
+              <p className="text-sm opacity-80">CEO</p>
 
+              <p className="mt-6 text-sm opacity-70">
+                Each beach was chosen for its cultural significance, beauty, and
+                global reputation — together forming the emotional core of Montero.
+                Each beach was chosen for its cultural significance, beauty, and
+                global reputation — together forming the emotional core of Montero.
               </p>
+
+              {/* ICONS */}
+              <div className="mt-8 flex gap-5 text-lg opacity-80">
+                <FaInstagram className="cursor-pointer transition hover:opacity-100 hover:scale-110" />
+                <FaWhatsapp className="cursor-pointer transition hover:opacity-100 hover:scale-110" />
+                <FaXTwitter className="cursor-pointer transition hover:opacity-100 hover:scale-110" />
+              </div>
             </div>
 
             <TeamCard img={About6} name="Della R. Thomas" role="CEO" />
@@ -218,8 +232,6 @@ Each beach was chosen for its cultural significance, beauty, and global reputati
       </section>
 
       <Footer />
-
-     
     </>
   );
 }
