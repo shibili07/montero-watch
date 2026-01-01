@@ -126,8 +126,9 @@ export default function Page() {
               <h3 className="font-cormorant text-xl">Della R. Thomas</h3>
               <p className=" text-sm opacity-80">CEO</p>
               <p className=" mt-6 text-sm opacity-70">
-                Each beach was chosen for its cultural significance and beauty —
-                forming the emotional core of Montero.
+                Each beach was chosen for its cultural significance, beauty, and global reputation — together forming the emotional core of Montero.
+Each beach was chosen for its cultural significance, beauty, and global reputation — together forming the emotional core of Montero.
+
               </p>
             </div>
 
@@ -164,7 +165,7 @@ export default function Page() {
                 <div key={i} className="border-b border-gray-200 pb-4 transition-all duration-300 hover:border-gray-400">
                   <button
                     onClick={() => setOpen(open === i ? null : i)}
-                    className="flex w-full items-center justify-between text-left font-mona text-black transition-colors duration-300 hover:text-gray-600"
+                    className="flex w-full items-center justify-between text-left  text-black transition-colors duration-300 hover:text-gray-600"
                   >
                     <span>{q}</span>
                     <span className="text-xl transition-transform duration-300" style={{ transform: open === i ? 'rotate(180deg)' : 'rotate(0deg)' }}>
