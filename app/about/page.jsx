@@ -41,7 +41,7 @@ export default function Page() {
             <h1 className="font-cormorant text-[clamp(2rem,6vw,4rem)]">
               A World Time Watch Inspired by Global Beaches
             </h1>
-            <p className="font-mona mt-4 opacity-90 animate-fade-in-up-delayed">
+            <p className=" mt-4 opacity-90 animate-fade-in-up-delayed">
               Crafted for explorers, dreamers, and lovers of the world's iconic
               beaches
             </p>
@@ -53,15 +53,16 @@ export default function Page() {
       <section className="bg-white px-6 py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-2">
           <div className="animate-slide-in-left">
-            <button className="inline-block bg-gray-200 px-4 py-1 text-sm font-mona text-gray-700 shadow-sm transition-all duration-300 hover:bg-gray-300 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.96] active:shadow-inner">
+            <button className="inline-block bg-gray-200 px-4 py-1 text-sm  text-gray-700 shadow-sm transition-all duration-300 hover:bg-gray-300 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.96] active:shadow-inner">
               About us
             </button>
             <h2 className="font-cormorant mt-6 text-4xl md:text-5xl transition-colors duration-300 hover:text-gray-700">
               The Story Behind Montero
             </h2>
-            <p className="font-mona mt-6 max-w-xl text-gray-700 transition-opacity duration-300 hover:opacity-80">
-              Montero was born from a deep appreciation for the world, its
-              diversity, and the timeless beauty of global coastlines.
+            <p className=" mt-6 max-w-xl text-gray-700 transition-opacity duration-300 hover:opacity-80">
+              Montero was born from a deep appreciation for the world, its diversity, and the timeless beauty of global coastlines. Each detail of the watch carries inspiration from the beaches that have shaped culture, adventure, and unforgettable memories. From Ibiza to Bali, Miami to Bora Bora, the Montero world-time concept celebrates the connection between people and place. It is more than a watch — it is a reminder that every moment holds a new horizon.
+
+
             </p>
           </div>
 
@@ -102,13 +103,13 @@ export default function Page() {
         <div className="mx-auto max-w-7xl">
           <div className="flex items-start justify-between">
             <div className="animate-fade-in">
-              <button className="inline-block bg-gray-200 px-4 py-1 text-sm font-mona text-gray-700 shadow-sm transition-all duration-300 hover:bg-gray-300 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.96] active:shadow-inner">
+              <button className="inline-block bg-gray-200 px-4 py-1 text-sm  text-gray-700 shadow-sm transition-all duration-300 hover:bg-gray-300 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.96] active:shadow-inner">
                 Our Team
               </button>
               <h2 className="font-cormorant mt-6 text-4xl md:text-5xl transition-colors duration-300 hover:text-gray-700">
                 The People Behind Montero
               </h2>
-              <p className="font-mona mt-4 max-w-md text-gray-600 transition-opacity duration-300 hover:opacity-80">
+              <p className=" mt-4 max-w-md text-gray-600 transition-opacity duration-300 hover:opacity-80">
                 Crafted by passionate professionals committed to precision and
                 quality
               </p>
@@ -123,8 +124,8 @@ export default function Page() {
           <div className="mt-16 flex gap-6 overflow-x-auto pb-4">
             <div className="min-w-[300px] bg-[#0f1e33] p-8 text-white transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 animate-slide-in-up">
               <h3 className="font-cormorant text-xl">Della R. Thomas</h3>
-              <p className="font-mona text-sm opacity-80">CEO</p>
-              <p className="font-mona mt-6 text-sm opacity-70">
+              <p className=" text-sm opacity-80">CEO</p>
+              <p className=" mt-6 text-sm opacity-70">
                 Each beach was chosen for its cultural significance and beauty —
                 forming the emotional core of Montero.
               </p>
@@ -148,7 +149,7 @@ export default function Page() {
                 Frequently Asked Question
               </h2>
 
-              <p className="font-mona mt-6 max-w-md text-gray-600 leading-relaxed transition-opacity duration-300 hover:opacity-80">
+              <p className=" mt-6 max-w-md text-gray-600 leading-relaxed transition-opacity duration-300 hover:opacity-80">
                 Each beach was chosen for its cultural significance, beauty, and
                 global reputation — together forming the emotional core of
                 Montero. Each beach was chosen for its cultural significance,
@@ -190,7 +191,7 @@ export default function Page() {
                 Subscribe for Exclusive Updates
               </h2>
 
-              <p className="font-mona mt-4 max-w-md text-gray-600 transition-opacity duration-300 hover:opacity-80">
+              <p className=" mt-4 max-w-md text-gray-600 transition-opacity duration-300 hover:opacity-80">
                 Join our mailing list to receive early access, limited-edition
                 alerts, and insider updates directly from the Montero team.
               </p>
@@ -235,8 +236,8 @@ function ValueCard({ img, title, text }) {
       />
       <div className="absolute inset-0 bg-black/40 transition-all duration-500 group-hover:bg-black/30" />
       <div className="absolute bottom-6 left-6 text-white transition-transform duration-500 group-hover:translate-y-[-8px]">
-        <h3 className="font-cormorant text-2xl transition-all duration-300">{title}</h3>
-        <p className="font-mona text-sm transition-all duration-300">{text}</p>
+        <h3 className="font-mona text-2xl transition-all duration-300">{title}</h3>
+        <p className=" text-sm transition-all duration-300">{text}</p>
       </div>
     </div>
   );
@@ -254,7 +255,7 @@ function TeamCard({ img, name, role }) {
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent transition-all duration-500 group-hover:from-black/60" />
       <div className="absolute bottom-6 left-6 text-white transition-transform duration-500 group-hover:translate-y-[-8px]">
         <h4 className="font-cormorant transition-all duration-300">{name}</h4>
-        <p className="font-mona text-sm opacity-80 transition-all duration-300">{role}</p>
+        <p className=" text-sm opacity-80 transition-all duration-300">{role}</p>
       </div>
     </div>
   );
