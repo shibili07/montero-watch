@@ -162,7 +162,7 @@ const page = () => {
                 Popular Post
               </h2>
 
-              <Link href="/review/blog">
+              <Link href="/review">
                 <button className="bg-black text-white px-5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm rounded-md transition-all duration-300 hover:bg-gray-800 active:scale-95">
                   View All
                 </button>

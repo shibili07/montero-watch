@@ -4,6 +4,7 @@ import React, {useState, useEffect, useRef} from "react";
 import Image from "next/image";
 import Navbar from "../components/navBar/NavBar";
 import Footer from "../components/home/Footer/Footer";
+import Link from "next/link";
 
 import Gallery1 from "@/public/images/Gallery/gallary1.jpg";
 import Gallery2 from "@/public/images/Gallery/gallary2.png";
@@ -80,9 +81,11 @@ export default function Page() {
                 iconic beaches
               </p>
 
-              <button className="mt-6 sm:mt-8 rounded-full bg-gray-200 px-6 sm:px-8 py-3 text-sm sm:text-base text-gray-800 shadow-sm transition-all duration-300 hover:bg-gray-300 hover:shadow-md active:scale-95">
+              <Link href="/product">
+                <button className="mt-6 sm:mt-8 rounded-full bg-gray-200 px-6 sm:px-8 py-3 text-sm sm:text-base text-gray-800 shadow-sm transition-all duration-300 hover:bg-gray-300 hover:shadow-md active:scale-95">
                 Pre-Order Now
               </button>
+              </Link>
             </div>
           </ScrollAnimation>
 
@@ -188,8 +191,17 @@ export default function Page() {
 
       {/* ROW 3 – FULL WIDTH */}
       <div className="relative h-[320px] md:h-[420px] md:col-span-2 overflow-hidden">
-        <Image src={Gallery8} alt="Gallery" fill className="object-cover" />
-      </div>
+      <video
+  src="/images/Gallery/galleryV.mp4"
+  poster="/images/Gallery/gallary8.jpg"
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="absolute inset-0 w-full h-full object-cover"
+/>
+
+</div>
 
     </div>
   </div>
