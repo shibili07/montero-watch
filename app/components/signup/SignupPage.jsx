@@ -1,17 +1,17 @@
 "use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import img from '../../../public/images/loginimg.jpg';
+import img from '../../../public/images/signupImg.jpg';
 
-export default function LoginPage() {
+export default function SignupPage() {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
         <div className="min-h-screen w-full bg-white flex items-center justify-center overflow-x-hidden pt-10 md:pt-0">
             <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 px-6 py-12 lg:py-0">
-
+        
                 {/* Image Section */}
                 <div className="w-full lg:w-1/2 flex items-center justify-center">
                     <div className="relative w-full max-w-[500px] aspect-square overflow-hidden shadow-2xl rounded-sm group">
@@ -31,7 +31,7 @@ export default function LoginPage() {
                 <div className="w-full lg:w-1/2 flex flex-col justify-center max-w-md mx-auto">
                     <header className="mb-8 text-center lg:text-left">
                         <h1 className="font-cormorant text-4xl md:text-5xl text-neutral-900 leading-tight mb-4 tracking-wide">
-                            Sign In Account
+                            Create Account
                         </h1>
                         <p className="monaSans text-neutral-500 text-sm md:text-base leading-relaxed tracking-tight max-w-sm">
                             Let&apos;s align our constellations! Reach out and let the magic
@@ -40,6 +40,15 @@ export default function LoginPage() {
                     </header>
 
                     <form className="space-y-6">
+                        {/* Name Input */}
+                        <div className="relative">
+                            <input
+                                type="text"
+                                placeholder="Name"
+                                className="w-full bg-neutral-50 border border-neutral-200 px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors"
+                            />
+                        </div>
+
                         {/* Email Input */}
                         <div className="relative">
                             <input
@@ -80,19 +89,16 @@ export default function LoginPage() {
                                 <input type="checkbox" className="w-4 h-4 border-neutral-300 rounded focus:ring-black accent-black transition-all" />
                                 <span className="monaSans text-xs text-neutral-600 group-hover:text-neutral-900 transition-colors">Keep me signed in</span>
                             </label>
-                            <Link href="#" className="monaSans text-xs text-neutral-500 hover:text-neutral-900 transition-all border-b border-neutral-400 hover:border-neutral-900">
-                                Forgot your password
-                            </Link>
                         </div>
 
                         <button className="w-full bg-black text-white font-medium py-5 text-sm uppercase tracking-[0.2em] transition-all duration-300 hover:bg-neutral-800 shadow-xl shadow-neutral-100 active:scale-[0.98]">
-                            Sign In
+                            Sign Up
                         </button>
                     </form>
 
                     <div className="mt-6 text-center lg:text-left">
-                        <Link href="/signup" className="monaSans text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
-                            Create account
+                        <Link href="/login" className="monaSans text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
+                            Already have an account? Sign In
                         </Link>
                     </div>
 

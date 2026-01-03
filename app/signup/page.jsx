@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../components/navBar/NavBar'
-import Loginpage from '../components/login/LoginPage'
+import Signup from '../components/signup/SignupPage'
 import Footer from '../components/home/Footer/Footer'
 
 function page() {
   return (
     <>
     <Navbar/>
-    <Loginpage/>
+    <Signup/>
     <Footer/>
     </>
   )
