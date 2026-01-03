@@ -26,7 +26,7 @@ export default function Quote() {
                    text-4xl md:text-5xl lg:text-6xl 
                    leading-[1.1] text-white"
           >
-            A World Time Watch Inspired by Global Beaches
+            A World Time Watch Inspired by Global Beaches 
           </h2>
 
           <p

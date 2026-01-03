@@ -47,7 +47,7 @@ const Page = () => {
               <p className="text-xs sm:text-sm lg:text-base text-white/90 mb-6 sm:mb-8 leading-relaxed">
                 Crafted for explorers, dreamers, and lovers of the
                 <br className="hidden sm:block" />
-                world's most iconic beaches
+                world s most iconic beaches
               </p>
 
               <button
@@ -309,7 +309,7 @@ const Page = () => {
                   text-xl md:text-2xl 
                   text-white/90 leading-relaxed"
             >
-              Crafted for explorers, dreamers, and lovers of the world's most
+              Crafted for explorers, dreamers, and lovers of the world s most
               iconic beaches
             </p>
           </div>
@@ -358,7 +358,7 @@ const Page = () => {
 
                   {/* Text */}
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                    I recently purchased the Montero watch, and I'm extremely
+                    I recently purchased the Montero watch, and I m extremely
                     satisfied. The design looks premium, the build quality is
                     solid, and it feels very comfortable on the wrist. Perfect
                     for both formal and casual wear.
