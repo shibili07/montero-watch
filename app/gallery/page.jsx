@@ -122,9 +122,11 @@ export default function Page() {
                 Crafted for explorers, dreamers, and lovers of the world's most iconic beaches
               </p>
 
+              <Link href="/product/english">
               <button className="mt-6 sm:mt-8 rounded-full border border-black px-6 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm transition-all duration-300 hover:bg-black hover:text-white active:scale-95">
                 Pre-Order Now
               </button>
+              </Link>
             </div>
           </ScrollAnimation>
 
@@ -143,9 +145,11 @@ export default function Page() {
                 Crafted for explorers, dreamers, and lovers of the world's most iconic beaches
               </p>
 
+              <Link href="/product/arabic">
               <button className="mt-6 sm:mt-8 rounded-full border border-black px-6 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm transition-all duration-300 hover:bg-black hover:text-white active:scale-95">
                 Pre-Order Now
               </button>
+              </Link>
             </div>
           </ScrollAnimation>
 
@@ -192,7 +196,7 @@ export default function Page() {
       {/* ROW 3 – FULL WIDTH */}
       <div className="relative h-[320px] md:h-[420px] md:col-span-2 overflow-hidden">
       <video
-  src="/images/Gallery/galleryV.mp4"
+  src={Gallery8}
   poster="/images/Gallery/gallary8.jpg"
     autoPlay
     muted
