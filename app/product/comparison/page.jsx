@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/navBar/NavBar";
-import Comparison1 from "@/public/images/Comparison/comparison1.jpg";
+import Comparison1 from "@/public/images/Comparison/comparisonFirst.jpg";
 import Comparison2 from "@/public/images/Comparison/comparison2.png";
 import Comparison3 from "@/public/images/Comparison/comparison3.png";
 import Comparison4 from "@/public/images/Comparison/comparison4.jpg";
@@ -46,21 +46,26 @@ const page = () => {
             {/* DESCRIPTION */}
             <ScrollAnimation animationClass="animate-fade-in-up" delay={300}>
               <p className="mt-6 max-w-3xl mx-auto text-gray-600 leading-relaxed text-sm md:text-base">
-                Montero was born from a deep appreciation for the world, its diversity,
-                and the timeless beauty of global coastlines. Each detail of the watch
-                carries inspiration from the beaches that have shaped culture,
-                adventure, and unforgettable memories.
-                <br /><br />
-                From Ibiza to Bali, Miami to Bora Bora, the Montero world-time concept
-                celebrates the connection between people and place. It is more than a
-                watch — it is a reminder that every moment holds a new horizon.
+                Montero was born from a deep appreciation for the world, its
+                diversity, and the timeless beauty of global coastlines. Each
+                detail of the watch carries inspiration from the beaches that
+                have shaped culture, adventure, and unforgettable memories.
+                <br />
+                <br />
+                From Ibiza to Bali, Miami to Bora Bora, the Montero world-time
+                concept celebrates the connection between people and place. It
+                is more than a watch — it is a reminder that every moment holds
+                a new horizon.
               </p>
             </ScrollAnimation>
 
             {/* WATCHES */}
-            <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
               {/* ENGLISH EDITION */}
-              <ScrollAnimation animationClass="animate-slide-in-left" delay={400}>
+              <ScrollAnimation
+                animationClass="animate-slide-in-left"
+                delay={400}
+              >
                 <div className="text-center">
                   <h3 className="font-cormorant text-2xl mb-6">
                     Montero English Edition
@@ -78,7 +83,10 @@ const page = () => {
               </ScrollAnimation>
 
               {/* ARAB EDITION */}
-              <ScrollAnimation animationClass="animate-slide-in-right" delay={400}>
+              <ScrollAnimation
+                animationClass="animate-slide-in-right"
+                delay={400}
+              >
                 <div className="text-center">
                   <h3 className="font-cormorant text-2xl mb-6">
                     Montero Arab Edition
@@ -122,18 +130,48 @@ const page = () => {
                 </h3>
 
                 <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                  Montero is available in two collectible editions each designed with
-                  its own identity while sharing the same world-time DNA and
-                  craftsmanship.
+                  Montero is available in two collectible editions each designed
+                  with its own identity while sharing the same world-time DNA
+                  and craftsmanship.
                 </p>
 
                 <ul className="grid grid-cols-2 gap-y-3 text-sm text-gray-700 mb-6">
-                  <li className="flex items-center gap-2">● Case size</li>
-                  <li className="flex items-center gap-2">● Movement</li>
-                  <li className="flex items-center gap-2">● Materials</li>
-                  <li className="flex items-center gap-2">● Warranty</li>
-                  <li className="flex items-center gap-2">● Straps</li>
-                  <li className="flex items-center gap-2">● Delivery Window</li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#2596be] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Case size
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#2596be] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Movement
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#2596be] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Materials
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#2596be] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Warranty
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#2596be] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Straps
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#2596be] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Delivery Window
+                  </li>
                 </ul>
 
                 <button className="rounded-full border border-black px-6 py-2 text-sm hover:bg-black hover:text-white transition">
@@ -150,18 +188,48 @@ const page = () => {
                 </h3>
 
                 <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                  Montero is available in two collectible editions each designed with
-                  its own identity while sharing the same world-time DNA and
-                  craftsmanship.
+                  Montero is available in two collectible editions each designed
+                  with its own identity while sharing the same world-time DNA
+                  and craftsmanship.
                 </p>
 
                 <ul className="grid grid-cols-2 gap-y-3 text-sm text-gray-700 mb-6">
-                  <li className="flex items-center gap-2">● Case size</li>
-                  <li className="flex items-center gap-2">● Movement</li>
-                  <li className="flex items-center gap-2">● Materials</li>
-                  <li className="flex items-center gap-2">● Warranty</li>
-                  <li className="flex items-center gap-2">● Straps</li>
-                  <li className="flex items-center gap-2">● Delivery Window</li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#15493b] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Case size
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#15493b] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Movement
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#15493b] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Materials
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#15493b] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Warranty
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#15493b] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Straps
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-[#15493b] text-lg leading-none">
+                      ●
+                    </span>{" "}
+                    Delivery Window
+                  </li>
                 </ul>
 
                 <button className="rounded-full border border-black px-6 py-2 text-sm hover:bg-black hover:text-white transition">
@@ -199,8 +267,9 @@ const page = () => {
                     </h2>
 
                     <p className="mt-3 sm:mt-4 max-w-md text-sm sm:text-base text-gray-600 transition-opacity duration-300 hover:opacity-80 leading-relaxed">
-                      Join our mailing list to receive early access, limited-edition
-                      alerts, and insider updates directly from the Montero team.
+                      Join our mailing list to receive early access,
+                      limited-edition alerts, and insider updates directly from
+                      the Montero team.
                     </p>
                   </div>
                 </ScrollAnimation>
@@ -230,9 +299,7 @@ const page = () => {
 
       <Footer />
 
-      <style jsx global>{`
-        
-      `}</style>
+      <style jsx global>{``}</style>
     </>
   );
 };
