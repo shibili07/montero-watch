@@ -45,7 +45,7 @@ export default function Page() {
               A World Time Watch Inspired by Global Beaches
             </h1>
             <p className="mt-4 text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up-delayed px-4">
-              Crafted for explorers, dreamers, and lovers of the world's iconic
+              Crafted for explorers, dreamers, and lovers of the world s iconic
               beaches
             </p>
           </div>

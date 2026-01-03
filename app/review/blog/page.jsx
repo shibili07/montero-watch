@@ -68,7 +68,7 @@ const page = () => {
             {/* PARAGRAPHS */}
             <div className="space-y-5 sm:space-y-6 text-gray-700 text-sm sm:text-base leading-relaxed">
               <p>
-                Time is more than seconds ticking by — it's stories, moments,
+                Time is more than seconds ticking by — its stories, moments,
                 and craftsmanship coming together. At Montero, every design
                 begins with purpose and passion. This journal shares the
                 inspiration, ideas, and precision behind our watches.
@@ -83,18 +83,18 @@ const page = () => {
                 one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in
                 classical literature, discovered the undoubtable source. Lorem
-                Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
+                Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus
+                Bonorum et Malorum (The Extremes of Good and Evil) by Cicero,
                 written in 45 BC. This book is a treatise on the theory of
                 ethics, very popular during the Renaissance. The first line of
-                Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
+                Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line
                 in section 1.10.32.
               </p>
 
               <p>
                 The standard chunk of Lorem Ipsum used since the 1500s is
                 reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                1.10.33 from de Finibus Bonorum et Malorum by Cicero are also
                 reproduced in their exact original form, accompanied by English
                 versions from the 1914 translation by H. Rackham.
               </p>
@@ -104,9 +104,9 @@ const page = () => {
             <ScrollAnimation animationClass="animate-fade-in" delay={200}>
               <blockquote className="relative my-12 sm:my-16 lg:my-20 pl-4 sm:pl-6 border-l-4 border-violet-500">
                 <p className="font-cormorant text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-800 leading-relaxed">
-                  "People worry that computers will get too smart and take over
-                  the world, but the real problem is that they're too stupid and
-                  they've already taken over the world."
+                  People worry that computers will get too smart and take over
+                  the world, but the real problem is that they re too stupid and
+                  they ve already taken over the world.
                 </p>
 
                 <footer className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-600 font-mona">
@@ -133,18 +133,18 @@ const page = () => {
                 one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in
                 classical literature, discovered the undoubtable source. Lorem
-                Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
+                Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus
+                Bonorum et Malorum  (The Extremes of Good and Evil) by Cicero,
                 written in 45 BC. This book is a treatise on the theory of
                 ethics, very popular during the Renaissance. The first line of
-                Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
+                Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line
                 in section 1.10.32.
               </p>
 
               <p>
                 The standard chunk of Lorem Ipsum used since the 1500s is
                 reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                1.10.33 from de Finibus Bonorum et Malorum by Cicero are also
                 reproduced in their exact original form, accompanied by English
                 versions from the 1914 translation by H. Rackham.
               </p>
