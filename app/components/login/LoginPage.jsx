@@ -1,8 +1,13 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import img from '../../../public/images/loginimg.jpg';
+
 export default function LoginPage() {
+    const [showPassword, setShowPassword] = useState(false);
+
     return (
         <div className="min-h-screen w-full bg-white flex items-center justify-center overflow-x-hidden pt-10 md:pt-0">
             <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 px-6 py-12 lg:py-0">
@@ -47,22 +52,33 @@ export default function LoginPage() {
                         {/* Password Input */}
                         <div className="relative group">
                             <input
-                                type="password"
+                                type={showPassword ? "text" : "password"}
                                 placeholder="Password"
                                 className="w-full bg-neutral-50 border border-neutral-200 px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors"
                             />
-                            <button type="button" className="absolute right-5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-900 transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                </svg>
+                            <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                className="absolute right-5 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-900 transition-colors"
+                            >
+                                {showPassword ? (
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                                    </svg>
+                                ) : (
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                )}
                             </button>
                         </div>
 
                         <div className="flex items-center justify-between pb-2">
                             <label className="flex items-center gap-3 cursor-pointer group">
                                 <input type="checkbox" className="w-4 h-4 border-neutral-300 rounded focus:ring-black accent-black transition-all" />
-                                <span className="monaSans text-xs text-neutral-600 group-hover:text-neutral-900 transition-colors">Keep me sign In</span>
+                                <span className="monaSans text-xs text-neutral-600 group-hover:text-neutral-900 transition-colors">Keep me signed in</span>
                             </label>
                             <Link href="#" className="monaSans text-xs text-neutral-500 hover:text-neutral-900 transition-all border-b border-neutral-400 hover:border-neutral-900">
                                 Forgot your password
