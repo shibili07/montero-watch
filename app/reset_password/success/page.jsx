@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import star from "./../../../public/images/contact/star.png";
 
@@ -8,6 +9,8 @@ import Footer from "../../components/home/Footer/Footer";
 import Navbar from "../../components/navBar/NavBar";
 
 export default function page() {
+    const router = useRouter();
+
     return (
         <>
             <Navbar />
@@ -45,7 +48,10 @@ export default function page() {
                 </div>
 
                 {/* Button Section */}
-                <button className="w-full max-w-xs bg-black text-white font-medium py-4 sm:py-5 text-xs sm:text-sm uppercase tracking-[0.2em] transition-all duration-300 hover:bg-neutral-800 shadow-xl shadow-neutral-100 active:scale-[0.98]">
+                <button
+                    onClick={() => router.push('/')}
+                    className="w-full max-w-xs bg-black text-white font-medium py-4 sm:py-5 text-xs sm:text-sm uppercase tracking-[0.2em] transition-all duration-300 hover:bg-neutral-800 shadow-xl shadow-neutral-100 active:scale-[0.98]"
+                >
                     Get Back
                 </button>
             </div>
