@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-
+import Link from 'next/link'  
 import Bubles from "@/public/images/Home/bubles.png";
 import Clock from "@/public/images/Home/clock.png";
 
@@ -55,9 +55,11 @@ const UpcomingReleases = () => {
             spot for the next limited edition.
           </p>
 
+          <Link href="/contact">
           <button className="px-8 py-3 rounded-full border border-white/40 text-white hover:bg-white hover:text-black transition">
             Join the List
           </button>
+          </Link>
         </div>
 
         {/* RIGHT CONTENT */}

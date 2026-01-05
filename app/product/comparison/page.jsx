@@ -174,9 +174,11 @@ const page = () => {
                   </li>
                 </ul>
 
-                <button className="rounded-full border border-black px-6 py-2 text-sm hover:bg-black hover:text-white transition">
-                  Pre-Order Now
-                </button>
+                <Link href="/product/english">
+              <button className="mt-6 sm:mt-8 rounded-full border border-black px-6 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm transition-all duration-300 hover:bg-black hover:text-white active:scale-95">
+                Pre-Order Now
+              </button>
+              </Link>
               </div>
             </ScrollAnimation>
 
@@ -232,9 +234,11 @@ const page = () => {
                   </li>
                 </ul>
 
-                <button className="rounded-full border border-black px-6 py-2 text-sm hover:bg-black hover:text-white transition">
-                  Pre-Order Now
-                </button>
+                <Link href="/product/arabic">
+              <button className="mt-6 sm:mt-8 rounded-full border border-black px-6 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm transition-all duration-300 hover:bg-black hover:text-white active:scale-95">
+                Pre-Order Now
+              </button>
+              </Link>
               </div>
             </ScrollAnimation>
 
