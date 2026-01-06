@@ -46,7 +46,7 @@ const Page = () => {
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6 sm:mb-8 leading-relaxed">
-                Crafted for explorers, dreamers, and lovers of the world's most iconic beaches
+                Crafted for explorers, dreamers, and lovers of the world s most iconic beaches
               </p>
 
               <button
@@ -375,7 +375,7 @@ const Page = () => {
             </h2>
 
             <p className="font-light text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed">
-              Crafted for explorers, dreamers, and lovers of the world's most iconic beaches
+              Crafted for explorers, dreamers, and lovers of the world s most iconic beaches
             </p>
           </div>
         </div>
@@ -421,7 +421,7 @@ const Page = () => {
 
                   {/* Text */}
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                    I recently purchased the Montero watch, and I'm extremely satisfied. The design looks premium, the build quality is solid, and it feels very comfortable on the wrist. Perfect for both formal and casual wear.
+                    I recently purchased the Montero watch, and I m extremely satisfied. The design looks premium, the build quality is solid, and it feels very comfortable on the wrist. Perfect for both formal and casual wear.
                   </p>
 
                   {/* User */}
