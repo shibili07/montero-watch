@@ -126,9 +126,11 @@ export default function Page() {
                 iconic beaches
               </p>
 
+              <Link href="/product/english">
               <button className="mt-6 sm:mt-8 rounded-full border border-black px-6 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm transition-all duration-300 hover:bg-black hover:text-white active:scale-95">
                 Pre-Order Now
               </button>
+              </Link>
             </div>
           </ScrollAnimation>
 
@@ -153,9 +155,11 @@ export default function Page() {
                 iconic beaches
               </p>
 
+              <Link href="/product/arabic">
               <button className="mt-6 sm:mt-8 rounded-full border border-black px-6 sm:px-8 py-2 sm:py-3 text-xs sm:text-sm transition-all duration-300 hover:bg-black hover:text-white active:scale-95">
                 Pre-Order Now
               </button>
+              </Link>
             </div>
           </ScrollAnimation>
         </div>

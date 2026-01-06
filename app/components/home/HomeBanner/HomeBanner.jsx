@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import WatchImage from "@/public/images/Home/bannerWatch.png";
 import LeftArrow from "@/public/images/Home/bannerleft.png";
 import RightArrow from "@/public/images/Home/bannerrigth.png";
+import Link from 'next/link'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,12 +154,14 @@ export default function HomeBanner() {
             iconic beaches
           </p>
 
-          <button
+          <Link href="/product">
+            <button
             
             className="px-6 py-3 rounded-full text-black bg-white border border-white font-medium hover:scale-105 transition"
           >
             Pre-Order Now
           </button>
+          </Link>
         </div>
 
         {/* RIGHT TEXT */}

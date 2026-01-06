@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from 'next/link'
 
 import WatchBlue from "@/public/images/Home/watch1.png";
 import WatchGreen from "@/public/images/Home/watch2.png";
@@ -67,9 +68,6 @@ const OurProducts = () => {
       ref={sectionRef}
       className="relative min-h-screen bg-white flex flex-col justify-center py-24 px-4 md:px-8"
     >
-      {/* TOP LABEL */}
-      <HomeButton text="Our Products" />
-
       {/* TITLE */}
       <div ref={titleRef} className="max-w-4xl mx-auto text-center">
         <h1 className="font-cormorant font-normal text-[48px] md:text-[61px] leading-[130%] tracking-tightest">
@@ -98,12 +96,14 @@ const OurProducts = () => {
 
       {/* CTA */}
       <div className="flex justify-center mt-8">
+        <Link href="/product">
         <button
           ref={ctaRef}
           className="bg-black text-white px-10 py-3 rounded-full text-base font-medium hover:opacity-80 transition"
         >
           View Details
         </button>
+        </Link>
       </div>
 
       {/* PRODUCT GRID */}

@@ -101,55 +101,49 @@ const Page = () => {
               {/* Watch Image with Background Text */}
               <div className="relative mb-12">
                 {/* Background Text */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <p
-                    className="
-        text-4xl lg:text-6xl
-        font-serif text-gray-200 tracking-wider
-        -translate-y-12   /* TEXT UP */
-      "
-                  >
+                {/* <div className="absolute inset-0 flex items-center justify-center">
+                  <p className="text-4xl lg:text-6xl font-serif text-gray-200 tracking-wider -translate-y-12">
                     LIMITED EDITION ONE OF
                   </p>
-                </div>
+                </div> */}
 
                 {/* Watch Image */}
                 <div className="relative z-10 w-full max-w-2xl mx-auto h-[400px] translate-y-10">
-  <Image
-    src={Green2}
-    alt="Montero Arabic Edition Watch"
-    fill
-    priority
-    className="
+                  <Image
+                    src={Green2}
+                    alt="Montero Arabic Edition Watch"
+                    fill
+                    priority
+                    className="
       object-contain
       rotate-[-70deg]
       sm:rotate-[-85deg]
       lg:rotate-[-95deg]
       transition-transform duration-500
     "
-  />
-</div>
-
+                  />
+                </div>
               </div>
 
               {/* Features Grid */}
-             <div className="max-w-6xl mx-auto mb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 gap-x-6 place-items-center">
-
-          {[
-            "Sapphire Crystal",
-            "Seiko NH34 GMT Movement",
-            "5 ATM Water Resistance",
-            "Stainless Steel Case",
-            "World-Time Beach Concept",
-          ].map((item) => (
-            <div key={item} className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-[#1a5647] rounded-full"></span>
-              <p className="text-gray-700 text-sm text-center">{item}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+              <div className="max-w-6xl mx-auto mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 gap-x-6 place-items-center">
+                  {[
+                    "Sapphire Crystal",
+                    "Seiko NH34 GMT Movement",
+                    "5 ATM Water Resistance",
+                    "Stainless Steel Case",
+                    "World-Time Beach Concept",
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-[#1a5647] rounded-full"></span>
+                      <p className="text-gray-700 text-sm text-center">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               <div className="flex items-center justify-center gap-2 mb-8">
                 <div className="flex items-center gap-2 lg:col-span-1 md:col-span-1 col-span-2 justify-center">
@@ -174,15 +168,8 @@ const Page = () => {
         </div>
       </section>
 
-
       {/* Section 3 */}
-      <section>
-
-
-
-
-        
-      </section>
+      <section></section>
 
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">

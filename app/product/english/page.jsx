@@ -109,17 +109,17 @@ const Page = () => {
               {/* Watch Image with Background Text */}
               <div className="relative mb-12">
                 {/* Background Text */}
-                <div className="absolute inset-0 flex items-center justify-center">
+                {/* <div className="absolute inset-0 flex items-center justify-center">
                   <p
                     className="
         text-4xl lg:text-6xl
         font-serif text-gray-200 tracking-wider
-        -translate-y-12   /* TEXT UP */
+        -translate-y-12 
       "
                   >
                     LIMITED EDITION ONE OF
                   </p>
-                </div>
+                </div> */}
 
                 {/* Watch Image */}
                <div className="relative z-10 w-full max-w-4xl mx-auto h-[520px] translate-y-10">
