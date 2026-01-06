@@ -9,6 +9,7 @@ import WatchFeatures from "../components/mainproduct/features/WatchFeatures";
 import Quote from "../components/mainproduct/quote/Quote";
 import SecondQuote from "../components/mainproduct/Quote2/SecondQuote";
 import Subscribe from "../components/mainproduct/subscribe/Subscribe";
+import ClientVoices from "../components/ClientVoices/page";
 // import AboutHome from "../components/home/About/AboutHome";
 
 function page() {
@@ -23,6 +24,7 @@ function page() {
       <WatchFeatures />
       <Quote />
       <SecondQuote/>
+      <ClientVoices />
       <Subscribe />
       </div>
 

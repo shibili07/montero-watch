@@ -13,7 +13,7 @@ import About2 from "@/public/images/About/about2.jpg";
 import About3 from "@/public/images/About/about3.jpg";
 import About4 from "@/public/images/About/about4.jpg";
 import About5 from "@/public/images/About/about5.jpg";
-import About6 from "@/public/images/About/about6.jpg";
+import About6 from "@/public/images/About/about6.jpeg";
 
 export default function Page() {
   const [open, setOpen] = useState(null);
@@ -164,9 +164,9 @@ export default function Page() {
                   </div>
                 </div>
 
-                <TeamCard img={About6} name="Della R. Thomas" role="CEO" />
-                <TeamCard img={About6} name="Della R. Thomas" role="CEO" />
-                <TeamCard img={About6} name="Della R. Thomas" role="CEO" />
+                <TeamCard img={About6} name="" role="" />
+                {/* <TeamCard img={About6} name="Della R. Thomas" role="CEO" />
+                <TeamCard img={About6} name="Della R. Thomas" role="CEO" /> */}
               </div>
             </ScrollAnimation>
           </div>
