@@ -80,14 +80,14 @@ export default function WatchFeatures() {
             <div className="flex gap-3 mt-2">
               <button
                 className={`w-4 h-4 sm:w-3 sm:h-3 rounded-full border ${activeColor === "green"
-                    ? "bg-green-800 border-green-800 scale-110"
-                    : "border-neutral-400"
+                  ? "bg-green-800 border-green-800 scale-110"
+                  : "border-neutral-400"
                   } transition-all`}
               />
               <button
                 className={`w-4 h-4 sm:w-3 sm:h-3 rounded-full border ${activeColor === "blue"
-                    ? "bg-blue-700 border-blue-700 scale-110"
-                    : "border-neutral-400"
+                  ? "bg-blue-700 border-blue-700 scale-110"
+                  : "border-neutral-400"
                   } transition-all`}
               />
             </div>
@@ -95,7 +95,11 @@ export default function WatchFeatures() {
 
           {/* RIGHT / BOTTOM ON MOBILE */}
           <div className="flex flex-col items-center md:items-end justify-between h-auto md:h-[420px] gap-6 md:gap-0">
-            <SideFeature icon={rightIcons[0]} text="Eastern Arabic numerals" theme={themeColor} />
+            <SideFeature
+              icon={rightIcons[0]}
+              text={activeColor === "green" ? "Eastern Arabic numerals" : "24-hour bezel display"}
+              theme={themeColor}
+            />
             <SideFeature icon={rightIcons[1]} text="GMT function for global synchrony" theme={themeColor} />
           </div>
 
