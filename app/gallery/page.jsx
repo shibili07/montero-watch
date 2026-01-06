@@ -65,6 +65,7 @@ export default function Page() {
       <Navbar />
 
       {/* ================= HERO / FEATURE SECTION ================= */}
+      <ScrollAnimation animationClass="animate-fade-in-up">
       <section className="bg-white px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 ">
         <div className="mx-auto max-w-7xl grid grid-cols-1 items-center gap-8 sm:gap-12 lg:gap-16 md:grid-cols-2">
           {/* LEFT CONTENT */}
@@ -101,8 +102,10 @@ export default function Page() {
           </ScrollAnimation>
         </div>
       </section>
+      </ScrollAnimation>
 
       {/* ================= PRODUCT EDITIONS ================= */}
+      <ScrollAnimation animationClass="animate-fade-in-up">
       <section className="bg-white px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 md:pt-12 lg:pt-16 pb-6 sm:pb-8 md:pb-12 lg:pb-16">
         <div className="mx-auto max-w-7xl grid grid-cols-1 gap-8 sm:gap-10 lg:gap-12 md:grid-cols-2">
           {/* CARD 1 */}
@@ -164,8 +167,10 @@ export default function Page() {
           </ScrollAnimation>
         </div>
       </section>
+      </ScrollAnimation>
 
-      {/* ================= IMAGE GALLERY SECTION ================= */}
+      {/* ================= IMAGE GALLERY SECTION ================= */}3
+      <ScrollAnimation animationClass="animate-fade-in-up">
       <section className="bg-white px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 md:pt-6 lg:pt-8 pb-4 sm:pb-6 md:pb-10 lg:pb-14">
         <div className="mx-auto max-w-7xl">
           {/* TITLE */}
@@ -236,6 +241,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      </ScrollAnimation>
 
       {/* ================= SUBSCRIBE SECTION ================= */}
       <ScrollAnimation animationClass="animate-fade-in-up">
