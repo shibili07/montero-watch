@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export default function Right() {
@@ -12,9 +13,9 @@ export default function Right() {
             </p>
 
             <div className="pt-2">
-                <button className="rounded-full border border-neutral-900 px-10 py-4 text-xs md:text-sm font-medium uppercase tracking-widest transition-all duration-300 hover:bg-neutral-900 hover:text-white">
+                <Link href={'/product/english'}><button className="rounded-full border border-neutral-900 px-10 py-4 text-xs md:text-sm font-medium uppercase tracking-widest transition-all duration-300 hover:bg-neutral-900 hover:text-white">
                     Pre-Order Now
-                </button>
+                </button></Link>
             </div>
         </div>
     );
