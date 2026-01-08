@@ -4,8 +4,9 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import img from '../../../public/images/signupImg.jpg';
-import { useAuth } from '../../context/AuthContext';
+import { useAuth } from '../../../context/AuthContext';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 export default function SignupPage() {
     const [showPassword, setShowPassword] = useState(false);
@@ -15,17 +16,57 @@ export default function SignupPage() {
     const { register } = useAuth();
     const router = useRouter();
     const [error, setError] = useState("");
+    const [fieldErrors, setFieldErrors] = useState({});
+
+    const validateForm = () => {
+        const errors = {};
+        if (!name.trim()) errors.name = "Name is required";
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email.trim()) {
+            errors.email = "Email is required";
+        } else if (!emailRegex.test(email)) {
+            errors.email = "Invalid email format";
+        }
+
+        if (!password) {
+            errors.password = "Password is required";
+        } else if (password.length < 6) {
+            errors.password = "Password must be at least 6 characters";
+        }
+
+        setFieldErrors(errors);
+        return Object.keys(errors).length === 0;
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError("");
+
+        if (!validateForm()) {
+            toast.error("Please fix the validation errors");
+            return;
+        }
+
         try {
-            await register({ name, email, password });
-            router.push("/login"); // Redirect to login after success
+            const response = await register({ name, email, password });
+
+            console.log("✅ Register response:", response);
+            toast.success("Registration successful!");
+
+            // optional: log specific fields if backend sends them
+            console.log("Message:", response?.message);
+            console.log("User:", response?.user);
+
+            router.push("/login");
         } catch (err) {
-            setError(err.response?.data?.message || "Registration failed");
+            console.error("❌ Register error:", err);
+            const msg = err?.response?.data?.message || err?.message || "Registration failed";
+            toast.error(msg);
+            setError(msg);
         }
     };
+
 
     return (
         <div className="mt-6 min-h-screen w-full bg-white flex items-center justify-center overflow-x-hidden pt-10 md:pt-0">
@@ -58,7 +99,7 @@ export default function SignupPage() {
                         </p>
                     </header>
 
-                    {error && <div className="text-red-500 text-sm mb-4">{error}</div>}
+                  
 
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         {/* Name Input */}
@@ -68,8 +109,9 @@ export default function SignupPage() {
                                 placeholder="Name"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                className="w-full bg-neutral-50 border border-neutral-200 px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors"
+                                className={`w-full bg-neutral-50 border px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors ${fieldErrors.name ? "border-red-500" : "border-neutral-200"}`}
                             />
+                            {fieldErrors.name && <p className="text-red-500 text-xs mt-1 absolute">{fieldErrors.name}</p>}
                         </div>
 
                         {/* Email Input */}
@@ -79,8 +121,9 @@ export default function SignupPage() {
                                 placeholder="Email ID"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                className="w-full bg-neutral-50 border border-neutral-200 px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors"
+                                className={`w-full bg-neutral-50 border px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors ${fieldErrors.email ? "border-red-500" : "border-neutral-200"}`}
                             />
+                            {fieldErrors.email && <p className="text-red-500 text-xs mt-1 absolute">{fieldErrors.email}</p>}
                         </div>
 
                         {/* Password Input */}
@@ -90,7 +133,7 @@ export default function SignupPage() {
                                 placeholder="Password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="w-full bg-neutral-50 border border-neutral-200 px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors"
+                                className={`w-full bg-neutral-50 border px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors ${fieldErrors.password ? "border-red-500" : "border-neutral-200"}`}
                             />
                             <button
                                 type="button"
@@ -109,6 +152,7 @@ export default function SignupPage() {
                                     </svg>
                                 )}
                             </button>
+                            {fieldErrors.password && <p className="text-red-500 text-xs mt-1 absolute -bottom-5">{fieldErrors.password}</p>}
                         </div>
 
                         <div className="flex items-center justify-between pb-2">
@@ -117,7 +161,7 @@ export default function SignupPage() {
                                 <span className="monaSans text-xs text-neutral-600 group-hover:text-neutral-900 transition-colors">Keep me signed in</span>
                             </label>
                         </div>
-
+                        {error && <div className="text-red-500 text-sm mb-4">{error}</div>}
                         <button className="w-full bg-black text-white font-medium py-5 text-sm uppercase tracking-[0.2em] transition-all duration-300 hover:bg-neutral-800 shadow-xl shadow-neutral-100 active:scale-[0.98]">
                             Sign Up
                         </button>

@@ -12,10 +12,32 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const { login } = useAuth();
   const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState({});
+
+  const validateForm = () => {
+    const errors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email.trim()) {
+      errors.email = "Email is required";
+    } else if (!emailRegex.test(email)) {
+      errors.email = "Invalid email format";
+    }
+
+    if (!password) {
+      errors.password = "Password is required";
+    }
+
+    setFieldErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+
+    if (!validateForm()) return;
+
     try {
       await login(email, password);
     } catch (err) {
@@ -63,8 +85,9 @@ export default function LoginPage() {
                 placeholder="Email ID"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-neutral-50 border border-neutral-200 px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors"
+                className={`w-full bg-neutral-50 border px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors ${fieldErrors.email ? "border-red-500" : "border-neutral-200"}`}
               />
+              {fieldErrors.email && <p className="text-red-500 text-xs mt-1 absolute">{fieldErrors.email}</p>}
             </div>
 
             {/* Password Input */}
@@ -74,7 +97,7 @@ export default function LoginPage() {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-neutral-50 border border-neutral-200 px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors"
+                className={`w-full bg-neutral-50 border px-5 py-4 monaSans text-sm text-neutral-800 placeholder:text-neutral-400 focus:outline-none focus:border-neutral-900 transition-colors ${fieldErrors.password ? "border-red-500" : "border-neutral-200"}`}
               />
               <button
                 type="button"
@@ -113,6 +136,7 @@ export default function LoginPage() {
                   </svg>
                 )}
               </button>
+              {fieldErrors.password && <p className="text-red-500 text-xs mt-1 absolute -bottom-5">{fieldErrors.password}</p>}
             </div>
 
             <div className="flex items-center justify-between pb-2">

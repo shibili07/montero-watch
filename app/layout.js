@@ -37,6 +37,7 @@ export const metadata = {
 };
 
 import { AuthProvider } from "../context/AuthContext";
+import ToasterProvider from "./components/ToasterProvider";
 
 export default function RootLayout({ children }) {
   return (
@@ -59,7 +60,10 @@ export default function RootLayout({ children }) {
           antialiased
         `}
       >
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <ToasterProvider />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
