@@ -78,7 +78,7 @@ const Categories = () => {
         {/* ===== LEFT CARD ===== */}
         <div
           ref={leftCardRef}
-          className="relative flex-1 h-[320px] overflow-hidden"
+          className="group relative flex-1 h-[320px] overflow-hidden"
         >
           <Image
             src={ArabicImg}
@@ -88,16 +88,21 @@ const Categories = () => {
             priority
           />
 
-          {/* Gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
-          {/* TOP CONTENT (FIXED POSITION) */}
           <div className="center-content absolute inset-0 flex flex-col items-center justify-center text-center px-6 space-y-4">
-            
             <Link href="/product/arabic">
-            <button className="border border-white text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-80 transition">
-              Pre-Order Now
-            </button>
+              <button
+                className="
+                  border border-white text-white
+                  px-6 py-2 rounded-full text-sm font-medium
+                  opacity-0 translate-y-3
+                  group-hover:opacity-100 group-hover:translate-y-0
+                  transition-all duration-300 ease-out
+                "
+              >
+                Pre-Order Now
+              </button>
             </Link>
 
             <h3 className="text-white text-2xl font-semibold">
@@ -108,7 +113,6 @@ const Categories = () => {
             </p>
           </div>
 
-          {/* BOTTOM LEFT TEXT */}
           <div className="absolute bottom-2 right-4">
             <span className="bottom-text text-white text-sm font-medium">
               Only 150 Pieces Worldwide
@@ -119,7 +123,7 @@ const Categories = () => {
         {/* ===== RIGHT CARD ===== */}
         <div
           ref={rightCardRef}
-          className="relative flex-1 h-[320px] overflow-hidden"
+          className="group relative flex-1 h-[320px] overflow-hidden"
         >
           <Image
             src={EnglishImg}
@@ -129,15 +133,21 @@ const Categories = () => {
             priority
           />
 
-          {/* Gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
-          {/* CENTER CONTENT (SAME TITLE POSITION LOGIC) */}
           <div className="center-content absolute inset-0 flex flex-col items-center justify-center text-center px-6 space-y-4">
             <Link href="/product/english">
-            <button className="border border-white text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-80 transition">
-              Pre-Order Now
-            </button>
+              <button
+                className="
+                  border border-white text-white
+                  px-6 py-2 rounded-full text-sm font-medium
+                  opacity-0 translate-y-3
+                  group-hover:opacity-100 group-hover:translate-y-0
+                  transition-all duration-300 ease-out
+                "
+              >
+                Pre-Order Now
+              </button>
             </Link>
 
             <h3 className="text-white text-2xl font-semibold">
@@ -149,7 +159,6 @@ const Categories = () => {
             </p>
           </div>
 
-          {/* BOTTOM LEFT TEXT */}
           <div className="absolute bottom-2 right-4">
             <span className="bottom-text text-white text-sm font-medium">
               Only 150 Pieces Worldwide

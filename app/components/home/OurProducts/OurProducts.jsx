@@ -70,27 +70,26 @@ const OurProducts = () => {
     >
       {/* TITLE */}
       <div ref={titleRef} className="max-w-4xl mx-auto text-center">
-        <h1 className="font-cormorant font-normal text-[48px] md:text-[61px] leading-[130%] tracking-tightest">
-          Choose Your Montero Edition
-        </h1>
+  <h1 className="font-cormorant font-normal text-[48px] md:text-[61px] leading-[130%] tracking-tightest">
+    Choose Your Montero Edition
+  </h1>
 
-        <p
-          className="
-  mt-6
-  leading-[170%]
-  tracking-[0.015em]
-  text-center
-  max-w-3xl
-  mx-auto
-">
-  Montero is available in two collectible editions, each designed with its own
-  identity while sharing the same world-time DNA and craftsmanship.
-</p>
+  <p
+    className="
+      mt-3
+      leading-[160%]
+      tracking-[0.015em]
+      text-center
+      max-w-3xl
+      mx-auto
+    "
+  >
+    Montero is available in two collectible editions, each designed with
+    its own identity while sharing the same world-time DNA and
+    craftsmanship.
+  </p>
+</div>
 
-
-
-
-      </div>
 
       {/* CTA */}
       <div className="flex justify-center mt-8">

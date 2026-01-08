@@ -31,7 +31,7 @@ const HomeButton = ({ text }) => {
     <div className=" flex justify-center mt-3">
       <span
         ref={buttonRef}
-        className="px-6 py-2 bg-gray-200 text-black text-sm font-medium rounded"
+        className="px-6 py-2 bg-gray-200 text-black text-sm font-medium"
       >
         {text}
       </span>

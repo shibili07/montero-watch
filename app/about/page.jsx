@@ -30,27 +30,30 @@ export default function Page() {
       <Navbar />
 
       {/* ================= HERO ================= */}
-      <section className="relative h-screen w-full overflow-hidden">
-        <Image
-          src={About1}
-          alt="Hero"
-          fill
-          priority
-          className="object-cover object-[center_10%] transition-transform duration-[8000ms] ease-out hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-black/50 transition-opacity duration-700" />
-        <div className="relative z-10 flex h-full items-center justify-center px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl text-center text-white animate-fade-in-up">
-            <h1 className="font-cormorant text-[clamp(2rem,6vw,4rem)] leading-tight">
-              A World Time Watch Inspired by Global Beaches
-            </h1>
-            <p className="mt-4 text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up-delayed px-4">
-              Crafted for explorers, dreamers, and lovers of the world s iconic
-              beaches
-            </p>
+      <ScrollAnimation animationClass="animate-fade-in-up">
+        <section className="relative h-screen w-full overflow-hidden">
+          <Image
+            src={About1}
+            alt="Hero"
+            fill
+            priority
+            className="object-cover object-[center_10%] transition-transform duration-[8000ms] ease-out hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/50 transition-opacity duration-700" />
+          <div className="relative z-10 flex h-full items-center justify-center px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl text-center text-white animate-fade-in-up">
+              <h1 className="font-cormorant text-[clamp(1.6rem,5vw,3.2rem)] leading-[1.15]">
+                A World Time Watch Inspired by Global Beaches
+              </h1>
+
+              <p className="mt-2 text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up-delayed">
+                Crafted for explorers, dreamers, and lovers of the world’s
+                iconic beaches
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
 
       {/* ================= ABOUT ================= */}
       <ScrollAnimation animationClass="animate-fade-in-up">
@@ -58,7 +61,7 @@ export default function Page() {
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:gap-12 md:grid-cols-2">
             <ScrollAnimation animationClass="animate-slide-in-left">
               <div>
-                <button className="inline-block bg-gray-200 px-4 py-1 text-xs sm:text-sm text-gray-700 shadow-sm transition-all duration-300 hover:bg-gray-300 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.96] active:shadow-inner">
+                <button className="inline-block bg-gray-200 px-4 py-1 text-xs sm:text-sm text-gray-700 shadow-sm transition-all duration-300  active:shadow-inner">
                   About us
                 </button>
                 <h2 className="font-cormorant mt-4 sm:mt-6 text-3xl sm:text-4xl lg:text-5xl transition-colors duration-300 hover:text-gray-700">
@@ -336,7 +339,6 @@ function TeamGroupCard({ img }) {
       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-500" />
 
       {/* PEOPLE DETAILS */}
-      
     </div>
   );
 }
