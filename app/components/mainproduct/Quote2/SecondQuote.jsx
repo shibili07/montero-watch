@@ -94,7 +94,7 @@ function SecondQuote() {
         {/* Right Side - Content */}
         <div className="flex-1 w-full max-w-xl text-center lg:text-left mt-12 lg:mt-0">
           <h2 className="font-cormorant text-4xl md:text-5xl lg:text-6xl text-[#1A1A1A] leading-[1.1] mb-6">
-            A World Time Watch Inspired <br className="hidden md:block" />
+            A World Time Watch Inspired
             by Global Beaches
           </h2>
 

@@ -186,7 +186,7 @@ const page = () => {
             <ScrollAnimation animationClass="animate-slide-in-left">
               <div>
                 <h3 className="font-cormorant text-2xl mb-4">
-                  Time is the vehicle that carries everything into nothing
+                  Time is the vehicle that carries everything into nothing  
                 </h3>
 
                 <p className="text-sm text-gray-600 leading-relaxed mb-6">

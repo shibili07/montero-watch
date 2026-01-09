@@ -16,7 +16,10 @@ const ClientVoices = () => {
             Review
           </span>
 
-          <h2 className="font-serif text-4xl lg:text-5xl text-gray-900 mb-4">
+          <h2
+            style={{ fontWeight: 500 }}
+            className="font-cormorant text-4xl lg:text-5xl text-gray-900 mb-4"
+          >
             Voices of Our Clients
           </h2>
 
@@ -28,10 +31,7 @@ const ClientVoices = () => {
         {/* Videos Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {videos.map((src, index) => (
-            <div
-              key={index}
-              className="relative h-[520px] overflow-hidden"
-            >
+            <div key={index} className="relative h-[520px] overflow-hidden">
               <iframe
                 src={src}
                 title={`Client review ${index + 1}`}
