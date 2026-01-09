@@ -129,36 +129,6 @@ export default function Page() {
         </section>
       </ScrollAnimation>
 
-      {/* ================= OUR TEAM ================= */}
-      <ScrollAnimation animationClass="animate-fade-in-up">
-        <section className="bg-white px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
-          <div className="mx-auto max-w-7xl">
-            {/* HEADER */}
-            <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
-              <div>
-                <button className="inline-block bg-gray-200 px-4 py-1 text-xs sm:text-sm text-gray-700">
-                  Our Team
-                </button>
-
-                <h2 className="font-cormorant mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl">
-                  The People Behind Montero
-                </h2>
-
-                <p className="mt-2 sm:mt-3 max-w-md text-sm sm:text-base text-gray-600">
-                  Crafted by passionate professionals committed to precision and
-                  quality
-                </p>
-              </div>
-            </div>
-
-            {/* CONTENT */}
-            <div className="mt-8 sm:mt-10 lg:mt-12 flex flex-col lg:flex-row gap-4 sm:gap-6 items-stretch">
-              <BlueInfoCard />
-              <TeamGroupCard img={About6} />
-            </div>
-          </div>
-        </section>
-      </ScrollAnimation>
 
       {/* ================= FAQ + SUBSCRIBE ================= */}
       <ScrollAnimation animationClass="animate-fade-in-up">
