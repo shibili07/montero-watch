@@ -41,11 +41,11 @@ const Page = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-8 lg:gap-12">
             {/* Left Content */}
             <div className="max-w-xl text-center lg:text-left z-10 order-2 lg:order-1">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif text-white leading-tight mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-cormorant text-white leading-tight mb-4 sm:mb-6">
                 A World Time Watch Inspired by Global Beaches
               </h1>
 
-              <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-6 sm:mb-8 leading-relaxed">
+              <p className="text-sm font-body font-extralight sm:text-base lg:text-lg text-white/90 mb-6 sm:mb-8 leading-relaxed">
                 Crafted for explorers, dreamers, and lovers of the world s most
                 iconic beaches
               </p>
@@ -78,9 +78,9 @@ const Page = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               {/* Title */}
-              <h2 className="text-4xl lg:text-5xl font-serif text-gray-900 mb-8">
-                Montero Arabic Edition
-              </h2>
+              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-cormorant text-gray-900 mb-2 sm:mb-3">
+              Montero English Edition
+            </h2>
               {/* Watch Image with Background Text */}
               <div className="relative mb-12">
                 {/* Background Text */}
@@ -162,7 +162,7 @@ const Page = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative">
           {/* Title - Always visible */}
           <div className="max-w-md mb-8 sm:mb-0">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-gray-900 mb-3">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-cormorant text-gray-900 mb-3">
               Technical Specifications
             </h2>
             <p className="text-sm text-gray-600">
@@ -280,7 +280,7 @@ const Page = () => {
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           {/* Title */}
-          <h2 className="text-3xl lg:text-4xl font-serif text-gray-900 mb-12">
+          <h2 className="text-3xl lg:text-4xl font-cormorant text-gray-900 mb-12">
             How to Set Your Montero Watch
           </h2>
 
@@ -375,33 +375,33 @@ const Page = () => {
       </section>
 
       <section className="w-full flex flex-col lg:flex-row relative">
-              {/* LEFT — Image with Gradient Fade */}
-              <div className="relative w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-[531px]">
-                <Image
-                  src={Green7}
-                  alt="Blueprint"
-                  fill
-                  className="object-cover object-center lg:object-left"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-transparent to-[#1A1E28]" />
-              </div>
-      
-              {/* RIGHT — Content */}
-              <div className="w-full lg:w-1/2 bg-[#1A1E28] flex flex-col justify-center px-6 sm:px-8 lg:px-20 py-12 sm:py-16 lg:py-0">
-                <div className="max-w-xl space-y-6 sm:space-y-8">
-                  <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight text-white">
-                    A World Time Watch Inspired by Global Beaches
-                  </h2>
-      
-                  <p className="font-light text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed">
-                    Crafted for explorers, dreamers, and lovers of the world s most
-                    iconic beaches
-                  </p>
-                </div>
-              </div>
-            </section>
+        {/* LEFT — Image with Gradient Fade */}
+        <div className="relative w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-[531px]">
+          <Image
+            src={Green7}
+            alt="Blueprint"
+            fill
+            className="object-cover object-center lg:object-left"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-transparent to-[#1A1E28]" />
+        </div>
+
+        {/* RIGHT — Content */}
+        <div className="w-full lg:w-1/2 bg-[#1A1E28] flex flex-col justify-center px-6 sm:px-8 lg:px-20 py-12 sm:py-16 lg:py-0">
+          <div className="max-w-xl space-y-6 sm:space-y-8">
+            <h2 className="font-serif text-3xl sm:text-4xl font-cormorant lg:text-5xl leading-tight text-white">
+              A World Time Watch Inspired by Global Beaches
+            </h2>
+
+            <p className="font-light text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed">
+              Crafted for explorers, dreamers, and lovers of the world s most
+              iconic beaches
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
