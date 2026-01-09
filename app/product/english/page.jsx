@@ -73,16 +73,20 @@ const Page = () => {
       </section>
 
       {/* ================= MONTERO EDITION SECTION ================= */}
-      <section className="relative w-full min-h-screen bg-gray-50 flex items-center justify-center py-12 sm:py-16 lg:py-20">
+      <section className="relative w-full min-h-fit bg-gray-50 flex items-center justify-center py-4 sm:py-5 lg:py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center">
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-gray-900 mb-6 sm:mb-8">
-              Montero English Edition
-            </h2>
+            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-serif text-gray-900 mb-2 sm:mb-3">
+  Montero English Edition
+</h2>
+
             {/* Watch Image */}
-            <div className="relative mb-8 sm:mb-12">
-              <div className="relative z-10 w-full max-w-xs sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto h-[300px] sm:h-[400px] md:h-[480px] lg:h-[520px]">
+            <div className="relative mb-1 sm:mb-2">
+              <div
+                className="relative z-10 w-full max-w-md sm:max-w-4xl md:max-w-5xl lg:max-w-6xl mx-auto
+          h-[280px] sm:h-[400px] md:h-[460px] lg:h-[560px]"
+              >
                 <Image
                   src={Blue2}
                   alt="Montero English Edition Watch"
@@ -92,9 +96,10 @@ const Page = () => {
                 />
               </div>
             </div>
+
             {/* Features Grid */}
-            <div className="max-w-6xl mx-auto mb-6 sm:mb-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 place-items-center">
+            <div className="max-w-6xl mx-auto mb-3 sm:mb-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-3 place-items-center">
                 {[
                   "Sapphire Crystal",
                   "Seiko NH34 GMT Movement",
@@ -103,7 +108,7 @@ const Page = () => {
                   "World-Time Beach Concept",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-[#1a5647] rounded-full flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-[#2596be] rounded-full flex-shrink-0"></span>
                     <p className="text-gray-700 text-xs sm:text-sm text-center">
                       {item}
                     </p>
@@ -111,29 +116,33 @@ const Page = () => {
                 ))}
               </div>
             </div>
+
             {/* Additional Features */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 px-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4 px-4">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-[#1a5647] rounded-full"></span>
+                <span className="w-2 h-2 bg-[#2596be] rounded-full"></span>
                 <p className="text-gray-700 text-xs sm:text-sm text-center">
                   Sapphire crystal for durability
                 </p>
               </div>
-              <div className="w-2 h-2 bg-[#1a5647] rounded-full hidden sm:block"></div>
+
+              <div className="w-2 h-2 bg-[#2596be] rounded-full hidden sm:block"></div>
+
               <p className="text-gray-700 text-xs sm:text-sm text-center">
                 GMT function for global synchrony
               </p>
             </div>
+
             {/* Order Button */}
             <Link href="/order">
               <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
-                <span className="text-xl">₽</span>
-                <span>859 Order Now</span>
+                <span className="text-xl">₹</span>
+                <span>859 Order Now</span> 
               </button>
-            </Link>{" "}
-            <br />
+            </Link> <br />
+
             {/* Limited Edition Badge */}
-            <div className="inline-flex items-center gap-3 mt-4">
+            <div className="inline-flex items-center gap-3 mt-2">
               <span className="px-3 py-1 text-xs tracking-widest font-semibold text-red-700 border border-red-600 uppercase">
                 Limited Edition
               </span>
