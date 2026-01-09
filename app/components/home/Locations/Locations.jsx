@@ -83,7 +83,7 @@ const Locations = () => {
       <div
         className="max-w-4xl mx-auto text-center space-y-5 px-4 mt-16"
       >
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-gray-600 font-body font-extralight">
           Together, these beaches form Montero’s world map — connecting you to
           memories, destinations, and future adventures.
         </p>

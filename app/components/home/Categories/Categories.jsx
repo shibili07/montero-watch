@@ -105,10 +105,10 @@ const Categories = () => {
               </button>
             </Link>
 
-            <h3 className="text-white text-2xl font-semibold">
+            <h3 className="text-white text-2xl ">
               Explore the Arabic Edition
             </h3>
-            <p className="text-gray-200">
+            <p className="text-gray-200 font-body font-extralight">
               Distinctively crafted with Eastern Arabic numerals and a bold blue dial
             </p>
           </div>
@@ -150,11 +150,11 @@ const Categories = () => {
               </button>
             </Link>
 
-            <h3 className="text-white text-2xl font-semibold">
+            <h3 className="text-white text-2xl">
               Explore the English Edition
             </h3>
 
-            <p className="text-gray-200 max-w-md">
+            <p className="text-gray-200 max-w-md font-body font-extralight">
               A refined classic design with modern elegance
             </p>
           </div>

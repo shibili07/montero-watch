@@ -50,7 +50,7 @@ const HOmeTittle = ({ title, description }) => {
     >
       <h2
         ref={titleRef}
-        className="font-display font-extralight text-3xl md:text-4xl"
+        className="font-cormorant text-3xl md:text-4xl"
       >
         {title}
       </h2>

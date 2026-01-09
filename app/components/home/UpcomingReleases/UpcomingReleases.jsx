@@ -46,11 +46,11 @@ const UpcomingReleases = () => {
         
         {/* LEFT CONTENT */}
         <div className="relative z-10 pl-12">
-          <h2 className="text-white font-serif text-4xl md:text-5xl  mb-6">
+          <h2 className="text-white text-4xl md:text-5xl mb-6 font-cormorant ">
             Already Released 
           </h2>
 
-          <p className="text-gray-400 max-w-md mb-8 leading-relaxed">
+          <p className="text-gray-400 max-w-md mb-8 leading-relaxed font-body font-extralight">
             Discover what’s next for Montero. Get early previews and reserve your
             spot for the next limited edition.
           </p>

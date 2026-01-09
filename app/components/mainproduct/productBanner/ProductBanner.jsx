@@ -55,10 +55,10 @@ function ProductBanner() {
           ref={textRef}
           className="space-y-6 w-full lg:w-[55%] mt-8 sm:mt-6 text-center lg:text-left flex flex-col items-center lg:items-start"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-cormorant leading-[1.1] max-w-[720px]">
-            A World Time Watch Inspired
-            <br />
-            by Global Beaches
+          <h1
+            className="text-3xl sm:text-4xl md:text-5xl xl:text-5xl font-cormorant leading-tight"
+          >
+            A World Time Watch Inspired by Global Beaches
           </h1>
 
           <p className="max-w-md font-Monasans font-light text-lg sm:text-xl md:text-2xl text-gray-300">

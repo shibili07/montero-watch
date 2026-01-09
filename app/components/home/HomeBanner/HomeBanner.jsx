@@ -139,7 +139,7 @@ export default function HomeBanner() {
         <div className="space-y-6  w-[55%] mt-10">
           <h1
             ref={titleRef}
-            className="text-3xl sm:text-4xl md:text-5xl xl:text-5xl font-serif leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl xl:text-5xl font-cormorant leading-tight"
           >
             A World Time Watch Inspired by Global Beaches
           </h1>

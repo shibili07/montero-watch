@@ -42,7 +42,7 @@ export default function FaqAndSubscribe() {
           
           {/* LEFT */}
           <div>
-            <h2 className="font-serif text-4xl mb-6">
+            <h2 className="text-4xl mb-6 font-cormorant font-bold">
               Frequently Asked Question
             </h2>
 
