@@ -78,9 +78,8 @@ const Page = () => {
           <div className="text-center">
             {/* Title */}
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-serif text-gray-900 mb-2 sm:mb-3">
-  Montero English Edition
-</h2>
-
+              Montero English Edition
+            </h2>
             {/* Watch Image */}
             <div className="relative mb-1 sm:mb-2">
               <div
@@ -96,7 +95,6 @@ const Page = () => {
                 />
               </div>
             </div>
-
             {/* Features Grid */}
             <div className="max-w-6xl mx-auto mb-3 sm:mb-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-3 place-items-center">
@@ -116,7 +114,6 @@ const Page = () => {
                 ))}
               </div>
             </div>
-
             {/* Additional Features */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4 px-4">
               <div className="flex items-center gap-2">
@@ -132,15 +129,14 @@ const Page = () => {
                 GMT function for global synchrony
               </p>
             </div>
-
             {/* Order Button */}
             <Link href="/order">
               <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
                 <span className="text-xl">₹</span>
-                <span>859 Order Now</span> 
+                <span>859 Order Now</span>
               </button>
-            </Link> <br />
-
+            </Link>{" "}
+            <br />
             {/* Limited Edition Badge */}
             <div className="inline-flex items-center gap-3 mt-2">
               <span className="px-3 py-1 text-xs tracking-widest font-semibold text-red-700 border border-red-600 uppercase">

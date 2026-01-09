@@ -85,7 +85,7 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   className={`
-                    text-[13px] font-medium tracking-wide relative
+                    text-[13px] font-semibold tracking-wide relative
                     transition-colors duration-200
                     ${isActive ? "text-black" : "text-gray-500 hover:text-black"}
                   `}
