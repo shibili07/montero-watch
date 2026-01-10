@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-
+import newcurrency from "../../../public/images/dbff981dfc9f1a8358f03cc8ee71583a164e6ffc.png";
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import Green1 from "@/public/images/GreenWatch/productGreen1.png";
@@ -10,6 +10,7 @@ import Green2 from "@/public/images/GreenWatch/productGreen2.png";
 import Green3 from "@/public/images/GreenWatch/productGreen3.png";
 import Green6 from "@/public/images/GreenWatch/productGreen6.png";
 import Green7 from "@/public/images/GreenWatch/productGreen7.jpg";
+import White from "@/public/images/BlueWatch/whiteShadow.png";
 
 import Navbar from "@/app/components/navBar/NavBar";
 import Footer from "@/app/components/home/Footer/Footer";
@@ -73,90 +74,96 @@ const Page = () => {
       </section>
 
       {/* Second Section */}
-      <section>
-        <div className="relative w-full min-h-screen bg-gray-50 flex items-center justify-center py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              {/* Title */}
-              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-cormorant text-gray-900 mb-2 sm:mb-3">
-              Montero English Edition
-            </h2>
-              {/* Watch Image with Background Text */}
-              <div className="relative mb-12">
-                {/* Background Text */}
-                {/* <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-4xl lg:text-6xl font-serif text-gray-200 tracking-wider -translate-y-12">
-                    LIMITED EDITION ONE OF
-                  </p>
-                </div> */}
+      {/* ===== Montero Arabic Edition ===== */}
+      <section className="relative w-full min-h-fit bg-gray-50 flex items-center justify-center py-4 sm:py-5 lg:py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="text-center">
+            {/* Title */}
+            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-cormorant text-gray-900 mb-2 sm:mb-3">
+              Montero Arabic Regional Edition
 
-                {/* Watch Image */}
-                <div className="relative z-10 w-full max-w-2xl mx-auto h-[400px] translate-y-10">
-                  <Image
-                    src={Green2}
-                    alt="Montero Arabic Edition Watch"
-                    fill
-                    priority
-                    className="
-      object-contain
-      rotate-[-70deg]
-      sm:rotate-[-85deg]
-      lg:rotate-[-95deg]
-      transition-transform duration-500
-    "
-                  />
-                </div>
+            </h2>
+
+            {/* Watch Image */}
+            <div className="relative mb-1 sm:mb-2">
+              <div
+                className="relative z-10 w-full max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto
+    h-[160px] sm:h-[240px] md:h-[300px] lg:h-[360px]
+    -rotate-6"
+              >
+                <Image
+                  src={Green2}
+                  alt="Montero Arabic Regional Edition Watch"
+                  fill
+                  priority
+                  className="object-contain"
+                />
               </div>
-              {/* Features Grid */}
-              <div className="max-w-6xl mx-auto mb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 gap-x-6 place-items-center">
-                  {[
-                    "Sapphire Crystal",
-                    "Seiko NH34 GMT Movement",
-                    "5 ATM Water Resistance",
-                    "Stainless Steel Case",
-                    "World-Time Beach Concept",
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-[#1a5647] rounded-full"></span>
-                      <p className="text-gray-700 text-sm text-center">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+            </div>
+
+            {/* Features Grid */}
+            <div className="max-w-6xl mx-auto mb-3 sm:mb-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-3 place-items-center">
+                {[
+                  "Sapphire Crystal",
+                  "Seiko NH34 GMT Movement",
+                  "5 ATM Water Resistance",
+                  "Stainless Steel Case",
+                  "World-Time Beach Concept",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-[#2596be] rounded-full flex-shrink-0"></span>
+                    <p className="text-gray-700 text-xs sm:text-sm text-center">
+                      {item}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <div className="flex items-center justify-center gap-2 mb-8">
-                <div className="flex items-center gap-2 lg:col-span-1 md:col-span-1 col-span-2 justify-center">
-                  <span className="w-2 h-2 bg-[#1a5647] rounded-full"></span>
-                  <p className="text-gray-700 text-sm text-center">
-                    Sapphire crystal for durability
-                  </p>
-                </div>
-                <div className="w-2 h-2 bg-[#1a5647] rounded-full"></div>
-                <p className="text-gray-700 text-sm">
-                  GMT function for global synchrony
+            </div>
+
+            {/* Additional Features */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4 px-4">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-[#2596be] rounded-full"></span>
+                <p className="text-gray-700 text-xs sm:text-sm text-center">
+                  Sapphire crystal for durability
                 </p>
               </div>
-              {/* Order Button */}
-              <Link href="/order">
-                <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
-                  <span className="text-xl">₽</span>
-                  <span>859 Order Now</span>
-                </button>
-              </Link>
-              <br /> <br />
-              <h1 className="inline-flex items-center gap-3">
-                <span className="px-3 py-1 text-xs tracking-widest font-semibold text-red-700 border border-red-600 uppercase">
-                  Limited Edition
-                </span>
-              </h1>
+
+              <div className="w-2 h-2 bg-[#2596be] rounded-full hidden sm:block"></div>
+
+              <p className="text-gray-700 text-xs sm:text-sm text-center">
+                GMT function for global synchrony
+              </p>
+            </div>
+
+            {/* Order Button */}
+            <Link href="/order">
+              <button className="bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2 justify-center">
+                <div className="relative w-4 h-4 sm:w-5 sm:h-5">
+                  <Image 
+                    src={newcurrency} 
+                    alt="Currency Symbol"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <span className="text-sm sm:text-base">860 Order Now</span>
+              </button>
+            </Link>
+            <br />
+
+            {/* Limited Edition Badge */}
+            <div className="inline-flex items-center gap-3 mt-2">
+              <span className="px-3 py-1 text-xs tracking-widest font-semibold text-red-700 border border-red-600 uppercase">
+                Limited Edition
+              </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section    3 */}
+      {/* Section 3 */}
       {/* ================= TECHNICAL SPECIFICATIONS SECTION ================= */}
       <section className="bg-white py-12 sm:py-16 lg:py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative">
@@ -173,14 +180,18 @@ const Page = () => {
 
           {/* Mobile/Tablet View - Stack layout */}
           <div className="lg:hidden mt-8 space-y-8">
-            {/* Watch Image - Mobile */}
+            {/* Watch Image Container with Rectangle Background */}
             <div className="relative w-full h-[400px] sm:h-[500px] flex items-center justify-center">
-              <Image
-                src={Green3}
-                alt="Montero Watch"
-                fill
-                className="object-contain"
-              />
+              {/* Main Watch Image */}
+              <div className="relative z-10 w-full h-full max-w-xs sm:max-w-sm flex items-center justify-center">
+                <Image
+                  src={Green3}
+                  alt="Montero Watch"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </div>
 
             {/* Specifications List - Mobile */}
@@ -188,8 +199,10 @@ const Page = () => {
               {[
                 "Stainless Steel",
                 "Polished & brushed finishing",
-                "Case Thickness: 14.8mm",
+                "Case Thickness: 13mm",
                 "Diameter: 41 mm",
+                "Arabic Numerals Dial",
+                "Special Edition for Middle East",
               ].map((spec, i) => (
                 <div
                   key={i}
@@ -238,7 +251,7 @@ const Page = () => {
               <div className="flex items-center gap-4">
                 <span className="w-2 h-2 bg-black rounded-full" />
                 <p className="text-sm text-gray-700 w-[240px]">
-                  Case Thickness: 14.8mm
+                  Case Thickness: 13mm
                 </p>
                 <span className="w-72 h-px bg-gray-300" />
               </div>
@@ -263,8 +276,19 @@ const Page = () => {
               </div>
             </div>
 
+            {/* Arabic Edition Spec */}
+            <div className="absolute right-[120px] bottom-36">
+              <div className="flex items-center gap-4">
+                <span className="w-2 h-2 bg-black rounded-full" />
+                <p className="text-sm text-gray-700 w-[180px]">
+                  Arabic Edition Dial
+                </p>
+                <span className="w-56 h-px bg-gray-300" />
+              </div>
+            </div>
+
             {/* WATCH IMAGE - Desktop */}
-            <div className="absolute left-[800px] top-[-250px] w-[900px] h-[1250px]">
+            <div className="absolute left-[800px] top-[-250px] w-[900px] h-[1250px] z-10">
               <Image
                 src={Green3}
                 alt="Montero Watch"
@@ -275,34 +299,49 @@ const Page = () => {
             </div>
           </div>
         </div>
+        <div className="flex justify-end">
+          <span className="inline-block w-48 h-48 mr-44 ml-12 relative top-4 overflow-hidden">
+            <Image
+              src={White}
+              alt="New Watch"
+              fill
+              priority
+              className="object-contain rotate-[0.5deg] scale-110"
+            />
+
+            {/* STRONG TOP fade */}
+            <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-transparent via-white/70 to-white"></span>
+          </span>
+        </div>
       </section>
 
+      {/* Section    4 */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           {/* Title */}
-          <h2 className="text-3xl lg:text-4xl font-cormorant text-gray-900 mb-12">
-            How to Set Your Montero Watch
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-cormorant text-gray-900 mb-8 sm:mb-12">
+            How to Set Your Montero Arabic Edition Watch
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-start">
             {/* LEFT CONTENT */}
-            <div className="space-y-10">
+            <div className="space-y-6 sm:space-y-10">
               {/* Section 1 */}
               <div>
-                <h3 className="text-base font-medium text-gray-900 mb-4">
+                <h3 className="text-sm sm:text-base font-medium text-gray-900 mb-3 sm:mb-4">
                   Section 1 Setting Local Time
                 </h3>
-                <ul className="space-y-3 text-gray-700 text-sm">
-                  <li className="flex gap-3">
-                    <span className="w-2 h-2 mt-2 bg-black rounded-full"></span>
+                <ul className="space-y-2 sm:space-y-3 text-gray-700 text-xs sm:text-sm">
+                  <li className="flex gap-2 sm:gap-3">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 mt-1.5 sm:mt-2 bg-black rounded-full flex-shrink-0"></span>
                     Pull the crown to Position 2
                   </li>
-                  <li className="flex gap-3">
-                    <span className="w-2 h-2 mt-2 bg-black rounded-full"></span>
+                  <li className="flex gap-2 sm:gap-3">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 mt-1.5 sm:mt-2 bg-black rounded-full flex-shrink-0"></span>
                     Rotate to adjust the main hour and minute hands
                   </li>
-                  <li className="flex gap-3">
-                    <span className="w-2 h-2 mt-2 bg-black rounded-full"></span>
+                  <li className="flex gap-2 sm:gap-3">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 mt-1.5 sm:mt-2 bg-black rounded-full flex-shrink-0"></span>
                     Push the crown back to lock
                   </li>
                 </ul>
@@ -310,20 +349,20 @@ const Page = () => {
 
               {/* Section 2 */}
               <div>
-                <h3 className="text-base font-medium text-gray-900 mb-4">
+                <h3 className="text-sm sm:text-base font-medium text-gray-900 mb-3 sm:mb-4">
                   Section 2 – Setting GMT Hand
                 </h3>
-                <ul className="space-y-3 text-gray-700 text-sm">
-                  <li className="flex gap-3">
-                    <span className="w-2 h-2 mt-2 bg-black rounded-full"></span>
+                <ul className="space-y-2 sm:space-y-3 text-gray-700 text-xs sm:text-sm">
+                  <li className="flex gap-2 sm:gap-3">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 mt-1.5 sm:mt-2 bg-black rounded-full flex-shrink-0"></span>
                     Pull the crown to Position 1
                   </li>
-                  <li className="flex gap-3">
-                    <span className="w-2 h-2 mt-2 bg-black rounded-full"></span>
+                  <li className="flex gap-2 sm:gap-3">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 mt-1.5 sm:mt-2 bg-black rounded-full flex-shrink-0"></span>
                     Rotate clockwise to move the GMT hand in 1-hour increments
                   </li>
-                  <li className="flex gap-3">
-                    <span className="w-2 h-2 mt-2 bg-black rounded-full"></span>
+                  <li className="flex gap-2 sm:gap-3">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 mt-1.5 sm:mt-2 bg-black rounded-full flex-shrink-0"></span>
                     Set it to a second time zone of your choice
                   </li>
                 </ul>
@@ -331,26 +370,30 @@ const Page = () => {
 
               {/* Section 3 */}
               <div>
-                <h3 className="text-base font-medium text-gray-900 mb-4">
+                <h3 className="text-sm sm:text-base font-medium text-gray-900 mb-3 sm:mb-4">
                   Section 3 – Using the Beach Time System
                 </h3>
-                <ul className="space-y-3 text-gray-700 text-sm">
-                  <li className="flex gap-3">
-                    <span className="w-2 h-2 mt-2 bg-black rounded-full"></span>
+                <ul className="space-y-2 sm:space-y-3 text-gray-700 text-xs sm:text-sm">
+                  <li className="flex gap-2 sm:gap-3">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 mt-1.5 sm:mt-2 bg-black rounded-full flex-shrink-0"></span>
                     Each beach on the dial corresponds to its GMT offset
                   </li>
-                  <li className="flex gap-3">
-                    <span className="w-2 h-2 mt-2 bg-black rounded-full"></span>
+                  <li className="flex gap-2 sm:gap-3">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 mt-1.5 sm:mt-2 bg-black rounded-full flex-shrink-0"></span>
                     Choose the beach you want, match its time zone with your GMT
                     hand, and enjoy instant global reference.
+                  </li>
+                  <li className="flex gap-2 sm:gap-3">
+                    <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 mt-1.5 sm:mt-2 bg-black rounded-full flex-shrink-0"></span>
+                    Arabic numerals provide traditional Middle Eastern elegance
                   </li>
                 </ul>
               </div>
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="relative w-full h-[420px] flex items-center justify-center">
-              <div className="relative w-full h-full max-w-md">
+            <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[420px] flex items-center justify-center">
+              <div className="relative w-full h-full max-w-sm md:max-w-md">
                 {/* Image */}
                 <video
                   src="/images/Gallery/galleryV.mp4"
@@ -361,19 +404,13 @@ const Page = () => {
                   alt="Watch Setting Video"
                   className="w-full h-full object-cover"
                 />
-
-                {/* Play Button */}
-                {/* <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-16 h-16 rounded-full border border-white flex items-center justify-center bg-black/30">
-              <div className="w-0 h-0 border-t-8 border-b-8 border-l-12 border-transparent border-l-white ml-1"></div>
-            </div>
-          </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Section    5 */}
       <section className="w-full flex flex-col lg:flex-row relative">
         {/* LEFT — Image with Gradient Fade */}
         <div className="relative w-full lg:w-1/2 h-[300px] sm:h-[400px] lg:h-[531px]">
@@ -389,80 +426,87 @@ const Page = () => {
         </div>
 
         {/* RIGHT — Content */}
-        <div className="w-full lg:w-1/2 bg-[#1A1E28] flex flex-col justify-center px-6 sm:px-8 lg:px-20 py-12 sm:py-16 lg:py-0">
-          <div className="max-w-xl space-y-6 sm:space-y-8">
-            <h2 className="font-serif text-3xl sm:text-4xl font-cormorant lg:text-5xl leading-tight text-white">
+        <div className="w-full lg:w-1/2 bg-[#1A1E28] flex flex-col justify-center px-4 sm:px-6 lg:px-12 xl:px-20 py-8 sm:py-12 lg:py-0">
+          <div className="max-w-xl space-y-4 sm:space-y-6 lg:space-y-8">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-cormorant leading-tight text-white">
               A World Time Watch Inspired by Global Beaches
             </h2>
 
-            <p className="font-light text-lg sm:text-xl lg:text-2xl text-white/90 leading-relaxed">
+            <p className="font-light text-base sm:text-lg lg:text-xl xl:text-2xl text-white/90 leading-relaxed">
               Crafted for explorers, dreamers, and lovers of the world s most
-              iconic beaches
+              iconic beaches. Now with Arabic numerals for the Middle Eastern
+              market.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Section   6 */}
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 items-start">
             {/* LEFT CONTENT */}
             <div className="lg:col-span-1">
-              <p className="text-sm text-gray-500 mb-3">Client Feedback</p>
+              <p className="text-xs sm:text-sm text-gray-500 mb-3">Client Feedback</p>
 
-              <h2 className="text-3xl font-serif text-gray-900 mb-6 leading-snug">
+              <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 mb-4 sm:mb-6 leading-snug">
                 What They Say After Using Our Product
               </h2>
 
-              <p className="text-gray-600 text-sm mb-8 leading-relaxed">
+              <p className="text-gray-600 text-xs sm:text-sm mb-6 sm:mb-8 leading-relaxed">
                 Many of our members have started their earlier careers with us.
               </p>
 
               {/* Arrows */}
               <div className="flex items-center gap-4">
-                <button className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center">
+                <button className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors">
                   ←
                 </button>
-                <button className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center">
+                <button className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors">
                   →
                 </button>
               </div>
             </div>
 
             {/* TESTIMONIAL CARDS */}
-            <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
               {/* CARD */}
               {[1, 2, 3].map((_, i) => (
-                <div key={i} className="border-b pb-8">
+                <div key={i} className="border-b pb-6 sm:pb-8">
                   {/* Stars */}
-                  <div className="flex gap-1 mb-4">
+                  <div className="flex gap-1 mb-3 sm:mb-4">
                     {[...Array(5)].map((_, j) => (
-                      <span key={j} className="text-orange-500 text-sm">
+                      <span key={j} className="text-orange-500 text-xs sm:text-sm">
                         ★
                       </span>
                     ))}
                   </div>
 
                   {/* Text */}
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                    I recently purchased the Montero watch, and I m extremely
-                    satisfied. The design looks premium, the build quality is
-                    solid, and it feels very comfortable on the wrist. Perfect
-                    for both formal and casual wear.
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
+                    I recently purchased the Montero Arabic Edition watch, and I
+                    m extremely satisfied. The design looks premium, the Arabic
+                    numerals add a traditional touch, and it feels very
+                    comfortable on the wrist. Perfect for both formal and casual
+                    wear.
                   </p>
 
                   {/* User */}
                   <div className="flex items-center gap-3">
-                    <div className="relative w-10 h-10 rounded-full overflow-hidden">
+                    <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden">
                       <Image
                         src={Green6}
-                        alt="Mirana Marci"
+                        alt={i === 0 ? "Ahmed Al-Farsi" : i === 1 ? "Mirana Marci" : "Sara Khalid"}
                         fill
                         className="object-cover"
                       />
                     </div>
-                    <p className="text-sm font-medium text-gray-900">
-                      Mirana Marci
+                    <p className="text-xs sm:text-sm font-medium text-gray-900">
+                      {i === 0
+                        ? "Ahmed Al-Farsi"
+                        : i === 1
+                        ? "Mirana Marci"
+                        : "Sara Khalid"}
                     </p>
                   </div>
                 </div>
@@ -471,32 +515,32 @@ const Page = () => {
           </div>
         </div>
       </section>
+      
+      {/* Section   6 */}
       {/* ================= FAQ + SUBSCRIBE ================= */}
       <ScrollAnimation animationClass="animate-fade-in-up">
-        <section className="bg-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+        <section className="bg-white px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-24">
           <div className="mx-auto max-w-7xl">
             {/* FAQ ROW */}
-            <div className="grid grid-cols-1 gap-8 lg:gap-16 md:grid-cols-2 items-start">
+            <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:gap-16 md:grid-cols-2 items-start">
               {/* LEFT TEXT */}
               <ScrollAnimation animationClass="animate-slide-in-left">
                 <div>
-                  <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl transition-colors duration-300 hover:text-gray-700">
+                  <h2 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl xl:text-5xl transition-colors duration-300 hover:text-gray-700">
                     Frequently Asked Question
                   </h2>
 
-                  <p className="mt-4 sm:mt-6 max-w-md text-sm sm:text-base text-gray-600 leading-relaxed transition-opacity duration-300 hover:opacity-80">
+                  <p className="mt-3 sm:mt-4 lg:mt-6 max-w-md text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed transition-opacity duration-300 hover:opacity-80">
                     Each beach was chosen for its cultural significance, beauty,
                     and global reputation — together forming the emotional core
-                    of Montero. Each beach was chosen for its cultural
-                    significance, beauty, and global reputation — together
-                    forming the emotional core of Montero.
+                    of Montero Arabic Edition.
                   </p>
                 </div>
               </ScrollAnimation>
 
               {/* RIGHT FAQ LIST */}
               <ScrollAnimation animationClass="animate-slide-in-right">
-                <div className="space-y-4 sm:space-y-6">
+                <div className="space-y-3 sm:space-y-4 lg:space-y-6">
                   {faqs.map((q, i) => (
                     <div
                       key={i}
@@ -504,11 +548,11 @@ const Page = () => {
                     >
                       <button
                         onClick={() => setOpen(open === i ? null : i)}
-                        className="flex w-full items-center justify-between text-left text-sm sm:text-base text-black transition-colors duration-300 hover:text-gray-600"
+                        className="flex w-full items-center justify-between text-left text-xs sm:text-sm lg:text-base text-black transition-colors duration-300 hover:text-gray-600"
                       >
                         <span className="pr-4">{q}</span>
                         <span
-                          className="text-xl flex-shrink-0 transition-transform duration-300"
+                          className="text-lg sm:text-xl flex-shrink-0 transition-transform duration-300"
                           style={{
                             transform:
                               open === i ? "rotate(180deg)" : "rotate(0deg)",
@@ -519,9 +563,10 @@ const Page = () => {
                       </button>
 
                       {open === i && (
-                        <p className="mt-3 sm:mt-4 max-w-md text-xs sm:text-sm text-gray-600 animate-fade-in-down">
-                          Yes, all Montero watches come with a comprehensive
-                          warranty covering manufacturing defects.
+                        <p className="mt-2 sm:mt-3 lg:mt-4 max-w-md text-xs sm:text-sm text-gray-600 animate-fade-in-down">
+                          Yes, all Montero Arabic Edition watches come with a
+                          comprehensive warranty covering manufacturing defects
+                          and Arabic numerals quality.
                         </p>
                       )}
                     </div>
@@ -532,35 +577,35 @@ const Page = () => {
 
             {/* SUBSCRIBE ROW */}
             <ScrollAnimation animationClass="animate-fade-in-up">
-              <div className="mt-16 sm:mt-24 lg:mt-32 grid grid-cols-1 items-center gap-8 lg:gap-12 md:grid-cols-2">
+              <div className="mt-8 sm:mt-12 lg:mt-24 grid grid-cols-1 items-center gap-6 sm:gap-8 lg:gap-12 md:grid-cols-2">
                 {/* LEFT TEXT */}
                 <ScrollAnimation animationClass="animate-slide-in-left">
                   <div>
-                    <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl transition-colors duration-300 hover:text-gray-700">
+                    <h2 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl xl:text-5xl transition-colors duration-300 hover:text-gray-700">
                       Subscribe for Exclusive Updates
                     </h2>
 
-                    <p className="mt-3 sm:mt-4 max-w-md text-sm sm:text-base text-gray-600 transition-opacity duration-300 hover:opacity-80 leading-relaxed">
+                    <p className="mt-2 sm:mt-3 lg:mt-4 max-w-md text-xs sm:text-sm lg:text-base text-gray-600 transition-opacity duration-300 hover:opacity-80 leading-relaxed">
                       Join our mailing list to receive early access,
                       limited-edition alerts, and insider updates directly from
-                      the Montero team.
+                      the Montero Arabic Edition team.
                     </p>
                   </div>
                 </ScrollAnimation>
 
                 {/* RIGHT */}
                 <ScrollAnimation animationClass="animate-slide-in-right">
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                    <div className="flex items-center bg-gray-200 px-4 py-3 w-full">
-                      <Mail className="mr-4" />
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4">
+                    <div className="flex items-center bg-gray-200 px-3 sm:px-4 py-2 sm:py-3 w-full">
+                      <Mail className="mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5" />
                       <input
                         type="email"
                         placeholder="Enter your e-mail"
-                        className="bg-transparent outline-none w-full text-xs sm:text-sm"
+                        className="bg-transparent outline-none w-full text-xs sm:text-sm placeholder:text-gray-500"
                       />
                     </div>
 
-                    <button className="bg-black text-white px-6 sm:px-8 py-3 text-xs sm:text-sm whitespace-nowrap hover:opacity-90 transition">
+                    <button className="bg-black text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 text-xs sm:text-sm whitespace-nowrap hover:opacity-90 transition">
                       Subscribe Now
                     </button>
                   </div>

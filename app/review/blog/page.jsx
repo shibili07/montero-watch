@@ -8,9 +8,9 @@ import Image from "next/image";
 import { Mail } from "lucide-react";
 import { FaArrowLeft } from "react-icons/fa6";
 import InnerBlog1 from "@/public/images/Blog/innerBlog1.jpg";
-import Blog5 from "@/public/images/Blog/blog5.jpg";
-import Blog6 from "@/public/images/Blog/blog6.jpg";
-import Blog7 from "@/public/images/Blog/blog7.jpg";
+import Blog5 from "@/public/images/Blog/gmt2.png";
+import Blog6 from "@/public/images/Blog/gmt3.jpg";
+import Blog7 from "@/public/images/Blog/gmt11.jpg";
 
 const page = () => {
   return (
@@ -39,7 +39,7 @@ const page = () => {
 
             {/* TITLE */}
             <h1 className="font-cormorant text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-black max-w-5xl">
-              Beyond the Watch Insights from the World of Montero
+              Montero GMT – Exclusive Production Update
             </h1>
           </div>
         </section>
@@ -51,8 +51,8 @@ const page = () => {
           <div className="mx-auto max-w-7xl">
             <div className="relative h-[280px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full overflow-hidden rounded-lg">
               <Image
-                src={InnerBlog1}
-                alt="Blog cover image"
+                src={InnerBlog1} // Suggested hero shot: Montero GMT dial
+                alt="Montero GMT Hero"
                 fill
                 priority
                 className="object-cover"
@@ -66,89 +66,112 @@ const page = () => {
       <ScrollAnimation animationClass="animate-fade-in-up">
         <section className="bg-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="mx-auto max-w-4xl">
-            {/* PARAGRAPHS */}
             <div className="space-y-5 sm:space-y-6 text-gray-700 text-sm sm:text-base leading-relaxed">
+
               <p>
-                Time is more than seconds ticking by — its stories, moments,
-                and craftsmanship coming together. At Montero, every design
-                begins with purpose and passion. This journal shares the
-                inspiration, ideas, and precision behind our watches.
+                By Montero Watches
+              </p>
+
+              <hr className="my-6 border-gray-300" />
+
+              <p>
+                Welcome Back, Montero Community
               </p>
 
               <p>
-                Step into the stories that shape Montero, beyond the dial.
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in
-                classical literature, discovered the undoubtable source. Lorem
-                Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus
-                Bonorum et Malorum (The Extremes of Good and Evil) by Cicero,
-                written in 45 BC. This book is a treatise on the theory of
-                ethics, very popular during the Renaissance. The first line of
-                Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line
-                in section 1.10.32.
+                Thank you for your continued trust and patience. We’re excited to share a new exclusive production update for the Montero GMT, following weeks of intensive refinement, testing, and collaboration.
               </p>
 
               <p>
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from de Finibus Bonorum et Malorum by Cicero are also
-                reproduced in their exact original form, accompanied by English
-                versions from the 1914 translation by H. Rackham.
-              </p>
-            </div>
-
-            {/* QUOTE BLOCK */}
-            <ScrollAnimation animationClass="animate-fade-in" delay={200}>
-              <blockquote className="relative my-12 sm:my-16 lg:my-20 pl-4 sm:pl-6 border-l-4 border-violet-500">
-                <p className="font-cormorant text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-800 leading-relaxed">
-                  People worry that computers will get too smart and take over
-                  the world, but the real problem is that they re too stupid and
-                  they ve already taken over the world.
-                </p>
-
-                <footer className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-600 font-mona">
-                  — Pedro Domingos
-                </footer>
-              </blockquote>
-            </ScrollAnimation>
-
-            {/* MORE PARAGRAPHS */}
-            <div className="space-y-5 sm:space-y-6 text-gray-700 text-sm sm:text-base leading-relaxed">
-              <p>
-                Time is more than seconds ticking by — it’s stories, moments,
-                and craftsmanship coming together. At Montero, every design
-                begins with purpose and passion. This journal shares the
-                inspiration, ideas, and precision behind our watches.
+                Over the past period, our focus has been on enhancing legibility, night visibility, and overall functional precision, while maintaining the distinctive identity that defines Montero.
               </p>
 
               <p>
-                Step into the stories that shape Montero, beyond the dial.
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in
-                classical literature, discovered the undoubtable source. Lorem
-                Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus
-                Bonorum et Malorum  (The Extremes of Good and Evil) by Cicero,
-                written in 45 BC. This book is a treatise on the theory of
-                ethics, very popular during the Renaissance. The first line of
-                Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line
-                in section 1.10.32.
+                Below are the latest confirmed updates now locked into production.
+              </p>
+
+              {/* Enhanced Lume Section */}
+              <h2 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl mt-8">
+                Enhanced Super-LumiNova – Clearer, Stronger, More Purposeful
+              </h2>
+              <p>
+                We’ve refined the lume application to ensure superior night-time readability while preserving visual balance during the day.
+              </p>
+              <ul className="list-disc list-inside">
+                <li>Earth map: Only the land areas are treated with Super-LumiNova for improved contrast and a cleaner night appearance.</li>
+                <li>Blue Edition: Emits a blue lume glow at night.</li>
+                <li>Green Edition: Emits a green lume glow at night.</li>
+                <li>GMT Red Pointer: Now larger, more legible, and filled with red lume for instant GMT reference.</li>
+              </ul>
+
+              {/* GMT Hand Visibility */}
+              <h2 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl mt-8">
+                Improved GMT Hand Visibility
+              </h2>
+              <p>
+                The red GMT pointer has been intentionally enlarged to improve readability across time zones, especially in low-light conditions.
+              </p>
+              <ul className="list-disc list-inside">
+                <li>Faster GMT recognition</li>
+                <li>Balanced dial proportions</li>
+                <li>Enhanced night performance</li>
+              </ul>
+
+              {/* Buckle Design */}
+              <h2 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl mt-8">
+                Refined Buckle Design – Minimal & Elegant
+              </h2>
+              <ul className="list-disc list-inside">
+                <li>The buckle will feature the Montero logo only</li>
+                <li>All additional markings have been removed for a refined finish</li>
+              </ul>
+
+              {/* GMT Crown */}
+              <h2 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl mt-8">
+                GMT Crown Optimization
+              </h2>
+              <ul className="list-disc list-inside">
+                <li>The GMT crown will be partially or fully hidden, depending on final ergonomic validation</li>
+                <li>This improves wearability without affecting functionality</li>
+              </ul>
+
+              {/* Caseback */}
+              <h2 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl mt-8">
+                Screw-Down Caseback – Finalized
+              </h2>
+              <ul className="list-disc list-inside">
+                <li>Improved durability</li>
+                <li>Secure construction</li>
+                <li>Long-term reliability</li>
+                <li>Limited Edition serial numbering</li>
+                <li>Clear English & Arabic lettering</li>
+                <li>Optimized font size and engraving depth for clarity</li>
+              </ul>
+
+              {/* GMT Function */}
+              <h2 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl mt-8">
+                GMT Function – Fully Verified
+              </h2>
+              <p>
+                We confirm that the GMT mechanism is working accurately and independently, ensuring correct time zone tracking without interference.
+              </p>
+              <p>
+                This was a critical functional checkpoint and is now fully validated.
+              </p>
+
+              <p className="mt-6">
+                We’ll continue sharing transparent updates as we move closer to delivery.
               </p>
 
               <p>
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from de Finibus Bonorum et Malorum by Cicero are also
-                reproduced in their exact original form, accompanied by English
-                versions from the 1914 translation by H. Rackham.
+                Thank you for being part of the Montero journey 
               </p>
+
+              <p className="mt-6 font-cormorant text-lg">
+                Montero Watches<br/>
+                Designed for explorers. Built for precision.
+              </p>
+
             </div>
           </div>
         </section>
