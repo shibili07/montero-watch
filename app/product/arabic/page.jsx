@@ -73,84 +73,81 @@ const Page = () => {
       </section>
 
       {/* Second Section */}
-      <section>
-        <div className="relative w-full min-h-screen bg-gray-50 flex items-center justify-center py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              {/* Title */}
-              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-cormorant text-gray-900 mb-2 sm:mb-3">
-              Montero English Edition
+      {/* ===== Montero Arabic Edition ===== */}
+      <section className="relative w-full min-h-fit bg-gray-50 flex items-center justify-center py-4 sm:py-5 lg:py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="text-center">
+            {/* Title */}
+            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-cormorant text-gray-900 mb-2 sm:mb-3">
+              Montero Arabic Edition
             </h2>
-              {/* Watch Image with Background Text */}
-              <div className="relative mb-12">
-                {/* Background Text */}
-                {/* <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-4xl lg:text-6xl font-serif text-gray-200 tracking-wider -translate-y-12">
-                    LIMITED EDITION ONE OF
-                  </p>
-                </div> */}
 
-                {/* Watch Image */}
-                <div className="relative z-10 w-full max-w-2xl mx-auto h-[400px] translate-y-10">
-                  <Image
-                    src={Green2}
-                    alt="Montero Arabic Edition Watch"
-                    fill
-                    priority
-                    className="
-      object-contain
-      rotate-[-70deg]
-      sm:rotate-[-85deg]
-      lg:rotate-[-95deg]
-      transition-transform duration-500
-    "
-                  />
-                </div>
+            {/* Watch Image */}
+            <div className="relative mb-1 sm:mb-2">
+              <div
+                className="relative z-10 w-full max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto
+          h-[160px] sm:h-[240px] md:h-[300px] lg:h-[360px]"
+              >
+                <Image
+                  src={Green2}
+                  alt="Montero Arabic Edition Watch"
+                  fill
+                  priority
+                  className="object-contain"
+                />
               </div>
-              {/* Features Grid */}
-              <div className="max-w-6xl mx-auto mb-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 gap-x-6 place-items-center">
-                  {[
-                    "Sapphire Crystal",
-                    "Seiko NH34 GMT Movement",
-                    "5 ATM Water Resistance",
-                    "Stainless Steel Case",
-                    "World-Time Beach Concept",
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-[#1a5647] rounded-full"></span>
-                      <p className="text-gray-700 text-sm text-center">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+            </div>
+
+            {/* Features Grid */}
+            <div className="max-w-6xl mx-auto mb-3 sm:mb-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-3 place-items-center">
+                {[
+                  "Sapphire Crystal",
+                  "Seiko NH34 GMT Movement",
+                  "5 ATM Water Resistance",
+                  "Stainless Steel Case",
+                  "World-Time Beach Concept",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-[#2596be] rounded-full flex-shrink-0"></span>
+                    <p className="text-gray-700 text-xs sm:text-sm text-center">
+                      {item}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <div className="flex items-center justify-center gap-2 mb-8">
-                <div className="flex items-center gap-2 lg:col-span-1 md:col-span-1 col-span-2 justify-center">
-                  <span className="w-2 h-2 bg-[#1a5647] rounded-full"></span>
-                  <p className="text-gray-700 text-sm text-center">
-                    Sapphire crystal for durability
-                  </p>
-                </div>
-                <div className="w-2 h-2 bg-[#1a5647] rounded-full"></div>
-                <p className="text-gray-700 text-sm">
-                  GMT function for global synchrony
+            </div>
+
+            {/* Additional Features */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4 px-4">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-[#2596be] rounded-full"></span>
+                <p className="text-gray-700 text-xs sm:text-sm text-center">
+                  Sapphire crystal for durability
                 </p>
               </div>
-              {/* Order Button */}
-              <Link href="/order">
-                <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
-                  <span className="text-xl">₽</span>
-                  <span>859 Order Now</span>
-                </button>
-              </Link>
-              <br /> <br />
-              <h1 className="inline-flex items-center gap-3">
-                <span className="px-3 py-1 text-xs tracking-widest font-semibold text-red-700 border border-red-600 uppercase">
-                  Limited Edition
-                </span>
-              </h1>
+
+              <div className="w-2 h-2 bg-[#2596be] rounded-full hidden sm:block"></div>
+
+              <p className="text-gray-700 text-xs sm:text-sm text-center">
+                GMT function for global synchrony
+              </p>
+            </div>
+
+            {/* Order Button */}
+            <Link href="/order">
+              <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
+                <span className="text-xl">₹</span>
+                <span>859 Order Now</span>
+              </button>
+            </Link>
+            <br />
+
+            {/* Limited Edition Badge */}
+            <div className="inline-flex items-center gap-3 mt-2">
+              <span className="px-3 py-1 text-xs tracking-widest font-semibold text-red-700 border border-red-600 uppercase">
+                Limited Edition
+              </span>
             </div>
           </div>
         </div>
