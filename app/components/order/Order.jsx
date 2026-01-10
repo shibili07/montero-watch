@@ -244,7 +244,7 @@ function Order() {
           </div>
 
           {/* Coupon Code */}
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <h3 className="text-sm font-medium text-gray-700 mb-2">
               Coupon Code
             </h3>
@@ -258,7 +258,7 @@ function Order() {
                 Apply Code
               </button>
             </div>
-          </div>
+          </div> */}
 
           {/* Totals */}
           <div className="space-y-4 border-b border-gray-200 pb-8 mb-8">

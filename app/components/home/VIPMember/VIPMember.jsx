@@ -29,11 +29,11 @@ const VIPMember = () => {
       {/* LEFT CONTENT */}
       <div className="bg-[#1A1E28] text-white p-12  pl-20 flex flex-col ">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+          <h2 className="text-3xl md:text-4xl font-cormorant mb-3">
             Join the Montero VIP Club
           </h2>
 
-          <p className="text-blue-100 mb-6 max-w-lg">
+          <p className="font-body font-extralight mb-6 max-w-lg">
             Our VIP members gain access to exclusive benefits and are part of shaping the future of Montero.
           </p>
 

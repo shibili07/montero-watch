@@ -70,27 +70,27 @@ const OurProducts = () => {
     >
       {/* TITLE */}
       <div ref={titleRef} className="max-w-4xl mx-auto text-center">
-        <h1 className="font-cormorant font-normal text-[48px] md:text-[61px] leading-[130%] tracking-tightest">
-          Choose Your Montero Edition
-        </h1>
+  <h1 className="font-cormorant font-normal text-[48px] md:text-[61px] leading-[130%] tracking-tightest">
+    Choose Your Montero Edition
+  </h1>
 
-        <p
-          className="
-  mt-6
-  leading-[170%]
-  tracking-[0.015em]
-  text-center
-  max-w-3xl
-  mx-auto
-">
-  Montero is available in two collectible editions, each designed with its own
-  identity while sharing the same world-time DNA and craftsmanship.
-</p>
+  <p
+    className="
+      mt-3
+      leading-[160%]
+      tracking-[0.015em]
+      text-center
+      max-w-3xl
+      mx-auto
+      font-body font-extralight
+    "
+  >
+    Montero is available in two collectible editions, each designed with
+    its own identity while sharing the same world-time DNA and
+    craftsmanship.
+  </p>
+</div>
 
-
-
-
-      </div>
 
       {/* CTA */}
       <div className="flex justify-center mt-8">
@@ -111,8 +111,8 @@ const OurProducts = () => {
           <div className="product-item grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             {/* TEXT */}
             <div className="space-y-3 text-center md:text-left">
-              <h3 className="text-2xl font-semibold">English Edition</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl ">English Edition Section</h3>
+              <p className="text-gray-600 ">
                 A refined international version with a crisp white & blue dial
                 inspired by modern minimalism.
               </p>
@@ -143,7 +143,7 @@ const OurProducts = () => {
 
             {/* TEXT */}
             <div className="space-y-3 order-1 md:order-2 text-center md:text-left">
-              <h3 className="text-2xl font-semibold">Arabic Edition</h3>
+              <h3 className="text-2xl">Arabic Edition Section</h3>
               <p className="text-gray-600">
                 A bold blue dial with Eastern Arabic numerals inspired by
                 regional identity and oceanic depth.

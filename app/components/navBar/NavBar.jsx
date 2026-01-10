@@ -72,42 +72,54 @@ const Navbar = () => {
   }, [isLangOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white z-50 font-mona">
+    <nav className="fixed top-0 left-0 w-full bg-white z-50 font-mona border-b border-neutral-100">
       <div className="mx-auto px-4 sm:px-6 lg:px-[6%]">
         <div className="relative h-16 flex items-center justify-between">
 
           {/* LEFT MENU */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-[13px] font-light tracking-wide transition ${isActive
-                      ? "text-black"
-                      : "text-gray-500 hover:text-black"
-                    }`}
+                  className={`
+                    text-[13px] font-semibold tracking-wide relative
+                    transition-colors duration-200
+                    ${isActive ? "text-black" : "text-gray-500 hover:text-black"}
+                  `}
                 >
                   {link.name}
+
+                  {/* ACTIVE / HOVER UNDERLINE */}
+                  <span
+                    className={`
+                      absolute left-0 -bottom-1 h-[1px] bg-black transition-all duration-300
+                      ${isActive ? "w-full" : "w-0 group-hover:w-full"}
+                    `}
+                  />
                 </Link>
               );
             })}
           </div>
 
-          {/* LOGO */}
-          <Link href="/" className="flex-shrink-0">
-            <Image src={Logo} alt="Logo" width={190} height={80} priority />
+          {/* LOGO - ALWAYS CENTER */}
+          <Link
+            href="/"
+            className="absolute left-1/2 -translate-x-1/2 flex-shrink-0"
+          >
+            <Image src={Logo} alt="Logo" width={180} height={70} priority />
           </Link>
 
           {/* RIGHT SIDE */}
           <div className="relative flex items-center gap-5">
 
-            {/* LANGUAGE (DESKTOP) */}
+            {/* LANGUAGE */}
             <div className="relative hidden md:block">
               <button
                 onClick={() => setIsLangOpen((p) => !p)}
-                className="flex items-center gap-1 text-[13px] font-light text-gray-700"
+                className="flex items-center gap-1 text-[13px] font-medium text-gray-600 hover:text-black transition"
               >
                 <Image src={Glob} alt="Lang" width={18} height={18} />
                 {selectedLang}
@@ -129,7 +141,7 @@ const Navbar = () => {
                         setSelectedLang(lang);
                         setIsLangOpen(false);
                       }}
-                      className="w-full px-3 py-2 text-left text-[13px] font-light hover:bg-gray-100"
+                      className="w-full px-3 py-2 text-left text-[13px] font-medium hover:bg-gray-100"
                     >
                       {lang}
                     </button>
@@ -138,7 +150,7 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* USER ICON (DESKTOP) */}
+            {/* USER ICON */}
             <button
               onClick={() => setIsDropdownOpen((p) => !p)}
               className="hidden md:block"
@@ -149,18 +161,19 @@ const Navbar = () => {
             {/* SIGN IN */}
             <Link
               href="/signup"
-              className={`hidden sm:block border border-black rounded-full px-6 py-[6px] text-[13px] font-light transition ${pathname === "/signup"
+              className={`
+                hidden sm:block rounded-full px-6 py-[6px]
+                text-[13px] font-medium transition
+                ${pathname === "/signup"
                   ? "bg-black text-white"
-                  : "hover:bg-black hover:text-white"
-                }`}
+                  : "border border-black hover:bg-black hover:text-white"}
+              `}
             >
               Sign In
             </Link>
 
             {/* MOBILE RIGHT */}
             <div className="md:hidden flex items-center gap-3">
-
-              {/* AVATAR (MOBILE) */}
               <button
                 onClick={() => setIsDropdownOpen((p) => !p)}
                 className="w-10 h-10 rounded-full overflow-hidden bg-neutral-200"
@@ -170,29 +183,20 @@ const Navbar = () => {
                   alt="User Avatar"
                   width={40}
                   height={40}
-                  className="object-cover w-full h-full"
+                  className="object-cover"
                 />
               </button>
 
-              {/* TOGGLE */}
               <button onClick={() => setIsMobileMenuOpen((p) => !p)}>
                 {isMobileMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
               </button>
             </div>
 
-            {/* 🔥 SHARED DROPDOWN (ONE INSTANCE) */}
+            {/* DROPDOWN */}
             {isDropdownOpen && (
-              <>
-                {/* DESKTOP */}
-                <div className="hidden md:block absolute right-0 top-10 z-[999]">
-                  <Dropdown onClose={() => setIsDropdownOpen(false)} />
-                </div>
-
-                {/* MOBILE */}
-                <div className="md:hidden absolute right-0 top-14 z-[999]">
-                  <Dropdown onClose={() => setIsDropdownOpen(false)} />
-                </div>
-              </>
+              <div className="absolute right-0 top-12 z-[999]">
+                <Dropdown onClose={() => setIsDropdownOpen(false)} />
+              </div>
             )}
           </div>
         </div>
@@ -212,39 +216,13 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-base font-light ${isActive ? "text-black" : "text-gray-600"
+                className={`text-base font-medium ${isActive ? "text-black" : "text-gray-600"
                   }`}
               >
                 {link.name}
               </Link>
             );
           })}
-
-          <div className="border-t pt-4">
-            <p className="text-sm text-gray-500 mb-2">Language</p>
-            <div className="flex gap-3">
-              {languages.map((lang) => (
-                <button
-                  key={lang}
-                  onClick={() => setSelectedLang(lang)}
-                  className={`px-4 py-1 rounded-full border text-sm ${selectedLang === lang
-                      ? "bg-black text-white border-black"
-                      : "border-gray-300"
-                    }`}
-                >
-                  {lang}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <Link
-            href="/signup"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-4 text-center border border-black rounded-full py-2 hover:bg-black hover:text-white"
-          >
-            Sign In
-          </Link>
         </div>
       </div>
     </nav>

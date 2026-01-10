@@ -15,6 +15,8 @@ import About4 from "@/public/images/About/about4.jpg";
 import About5 from "@/public/images/About/about5.jpg";
 import About6 from "@/public/images/About/about6.jpeg";
 
+import { Mail } from "lucide-react";
+
 export default function Page() {
   const [open, setOpen] = useState(null);
 
@@ -30,41 +32,46 @@ export default function Page() {
       <Navbar />
 
       {/* ================= HERO ================= */}
-      <section className="relative h-screen w-full overflow-hidden">
-        <Image
-          src={About1}
-          alt="Hero"
-          fill
-          priority
-          className="object-cover object-[center_10%] transition-transform duration-[8000ms] ease-out hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-black/50 transition-opacity duration-700" />
-        <div className="relative z-10 flex h-full items-center justify-center px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl text-center text-white animate-fade-in-up">
-            <h1 className="font-cormorant text-[clamp(2rem,6vw,4rem)] leading-tight">
-              A World Time Watch Inspired by Global Beaches
-            </h1>
-            <p className="mt-4 text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up-delayed px-4">
-              Crafted for explorers, dreamers, and lovers of the world s iconic
-              beaches
-            </p>
+      <ScrollAnimation animationClass="animate-fade-in-up">
+        <section className="relative h-screen w-full overflow-hidden">
+          <Image
+            src={About1}
+            alt="Hero"
+            fill
+            priority
+            className="object-cover object-[center_10%] transition-transform duration-[8000ms] ease-out hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/50 transition-opacity duration-700" />
+          <div className="relative z-10 flex h-full items-center justify-center px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl text-center text-white animate-fade-in-up">
+              <h1 className="font-cormorant text-[clamp(1.6rem,5vw,3.2rem)] leading-[1.15]">
+                A World Time Watch Inspired by Global Beaches
+              </h1>
+
+              <p className="mt-2 text-sm sm:text-base lg:text-lg opacity-90 animate-fade-in-up-delayed">
+                Crafted for explorers, dreamers, and lovers of the world’s
+                iconic beaches
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
 
       {/* ================= ABOUT ================= */}
       <ScrollAnimation animationClass="animate-fade-in-up">
-        <section className="bg-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:gap-12 md:grid-cols-2">
+        <section className="bg-white px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 lg:gap-10 md:grid-cols-2">
             <ScrollAnimation animationClass="animate-slide-in-left">
               <div>
-                <button className="inline-block bg-gray-200 px-4 py-1 text-xs sm:text-sm text-gray-700 shadow-sm transition-all duration-300 hover:bg-gray-300 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.96] active:shadow-inner">
+                <button className="inline-block bg-gray-200 px-4 py-1 text-xs sm:text-sm text-gray-700 shadow-sm">
                   About us
                 </button>
-                <h2 className="font-cormorant mt-4 sm:mt-6 text-3xl sm:text-4xl lg:text-5xl transition-colors duration-300 hover:text-gray-700">
+
+                <h2 className="font-cormorant mt-3 sm:mt-4 text-3xl sm:text-4xl lg:text-5xl">
                   The Story Behind Montero
                 </h2>
-                <p className="mt-4 sm:mt-6 max-w-xl text-sm sm:text-base text-gray-700 transition-opacity duration-300 hover:opacity-80 leading-relaxed">
+
+                <p className="mt-3 sm:mt-4 max-w-xl text-sm sm:text-base text-gray-700 leading-relaxed">
                   Montero was born from a deep appreciation for the world, its
                   diversity, and the timeless beauty of global coastlines. Each
                   detail of the watch carries inspiration from the beaches that
@@ -78,7 +85,7 @@ export default function Page() {
             </ScrollAnimation>
 
             <ScrollAnimation animationClass="animate-slide-in-right">
-              <div className="relative h-[300px] sm:h-[400px] lg:h-[520px] overflow-hidden group">
+              <div className="relative h-[260px] sm:h-[340px] lg:h-[460px] overflow-hidden group">
                 <Image
                   src={About2}
                   alt="About"
@@ -93,8 +100,8 @@ export default function Page() {
 
       {/* ================= VALUES ================= */}
       <ScrollAnimation animationClass="animate-fade-in-up">
-        <section className="bg-white px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-12 sm:pb-16 lg:pb-20">
-          <div className="mx-auto grid max-w-7xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <section className="bg-white px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-8 sm:pb-10 lg:pb-12">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
             <ScrollAnimation animationClass="animate-slide-in-up" delay={0}>
               <ValueCard
                 img={About3}
@@ -102,6 +109,7 @@ export default function Page() {
                 text="For those who never stop exploring"
               />
             </ScrollAnimation>
+
             <ScrollAnimation animationClass="animate-slide-in-up" delay={200}>
               <ValueCard
                 img={About4}
@@ -109,6 +117,7 @@ export default function Page() {
                 text="Powered by reliable world-time engineering"
               />
             </ScrollAnimation>
+
             <ScrollAnimation animationClass="animate-slide-in-up" delay={400}>
               <ValueCard
                 img={About5}
@@ -120,69 +129,39 @@ export default function Page() {
         </section>
       </ScrollAnimation>
 
-      {/* ================= OUR TEAM ================= */}
-      <ScrollAnimation animationClass="animate-fade-in-up">
-        <section className="bg-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl">
-            {/* HEADER */}
-            <div className="flex flex-col sm:flex-row items-start justify-between gap-6">
-              <div>
-                <button className="inline-block bg-gray-200 px-4 py-1 text-xs sm:text-sm text-gray-700">
-                  Our Team
-                </button>
-                <h2 className="font-cormorant mt-6 text-3xl sm:text-4xl lg:text-5xl">
-                  The People Behind Montero
-                </h2>
-                <p className="mt-4 max-w-md text-sm sm:text-base text-gray-600">
-                  Crafted by passionate professionals committed to precision and
-                  quality
-                </p>
-              </div>
-            </div>
-
-            {/* CONTENT */}
-            <div className="mt-12 lg:mt-16 flex flex-col lg:flex-row gap-6 items-stretch">
-              <BlueInfoCard />
-              <TeamGroupCard img={About6} />
-            </div>
-          </div>
-        </section>
-      </ScrollAnimation>
 
       {/* ================= FAQ + SUBSCRIBE ================= */}
       <ScrollAnimation animationClass="animate-fade-in-up">
-        <section className="bg-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+        <section className="bg-white px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
           <div className="mx-auto max-w-7xl">
             {/* FAQ ROW */}
-            <div className="grid grid-cols-1 gap-8 lg:gap-16 md:grid-cols-2 items-start">
+            <div className="grid grid-cols-1 gap-6 lg:gap-10 md:grid-cols-2 items-start">
               {/* LEFT TEXT */}
               <ScrollAnimation animationClass="animate-slide-in-left">
                 <div>
-                  <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl transition-colors duration-300 hover:text-gray-700">
+                  <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl">
                     Frequently Asked Question
                   </h2>
 
-                  <p className="mt-4 sm:mt-6 max-w-md text-sm sm:text-base text-gray-600 leading-relaxed transition-opacity duration-300 hover:opacity-80">
+                  <p className="mt-3 sm:mt-4 max-w-md text-sm sm:text-base text-gray-600 leading-relaxed">
                     Each beach was chosen for its cultural significance, beauty,
                     and global reputation — together forming the emotional core
-                    of Montero. Each beach was chosen for its cultural
-                    significance, beauty, and global reputation — together
-                    forming the emotional core of Montero.
+                    of Montero.
                   </p>
                 </div>
               </ScrollAnimation>
 
               {/* RIGHT FAQ LIST */}
               <ScrollAnimation animationClass="animate-slide-in-right">
-                <div className="space-y-4 sm:space-y-6">
+                <div className="space-y-3 sm:space-y-4">
                   {faqs.map((q, i) => (
                     <div
                       key={i}
-                      className="border-b border-gray-200 pb-3 sm:pb-4 transition-all duration-300 hover:border-gray-400"
+                      className="border-b border-gray-200 pb-3 transition-all duration-300 hover:border-gray-400"
                     >
                       <button
                         onClick={() => setOpen(open === i ? null : i)}
-                        className="flex w-full items-center justify-between text-left text-sm sm:text-base text-black transition-colors duration-300 hover:text-gray-600"
+                        className="flex w-full items-center justify-between text-left text-sm sm:text-base text-black"
                       >
                         <span className="pr-4">{q}</span>
                         <span
@@ -197,7 +176,7 @@ export default function Page() {
                       </button>
 
                       {open === i && (
-                        <p className="mt-3 sm:mt-4 max-w-md text-xs sm:text-sm text-gray-600 animate-fade-in-down">
+                        <p className="mt-2 sm:mt-3 max-w-md text-xs sm:text-sm text-gray-600 animate-fade-in-down">
                           Yes, all Montero watches come with a comprehensive
                           warranty covering manufacturing defects.
                         </p>
@@ -230,7 +209,7 @@ export default function Page() {
                 <ScrollAnimation animationClass="animate-slide-in-right">
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <div className="flex items-center bg-gray-200 px-4 py-3 w-full">
-                      <span className="mr-3 text-gray-500">✉</span>
+                      <Mail className="mr-4" />
                       <input
                         type="email"
                         placeholder="Enter your e-mail"
@@ -336,7 +315,6 @@ function TeamGroupCard({ img }) {
       <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-500" />
 
       {/* PEOPLE DETAILS */}
-      
     </div>
   );
 }

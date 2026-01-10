@@ -4,15 +4,6 @@
    MONA SANS – BODY / PARAGRAPH
    ============================= */
 
-   
-/* .font-mona {
-  font-family: var(--font-mona), "Mona Sans", sans-serif;
-  font-weight: 400;
-  font-variation-settings: "wght" 400;
-  line-height: 1.7;
-  letter-spacing: 0.015em;
-} */
-
 .font-mona {
   font-family: "Mona Sans", sans-serif;
   font-weight: 300;
@@ -22,145 +13,84 @@
   letter-spacing: -0.04em;
 }
 
-
 /* =============================
    CORMORANT – HEADINGS
    ============================= */
+
 .font-cormorant {
   font-family: var(--font-cormorant), "Cormorant Garamond", serif;
   font-weight: 300;
 }
 
 /* =============================
-   ANIMATIONS (UNCHANGED)
+   SCROLL ANIMATIONS (GLOBAL)
    ============================= */
-@theme {
-  @keyframes slideUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-
-  @keyframes slideLeft {
-    0% { opacity: 0; transform: translateX(-60px); }
-    100% { opacity: 1; transform: translateX(0); }
+  to {
+    opacity: 1;
   }
-
-  @keyframes drawLine {
-    0% { width: 0; opacity: 0; }
-    100% { width: 100%; opacity: 1; }
-  }
-
-  @keyframes pulseDot {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.4); }
-  }
-
-  --animate-slide-up: slideUp 0.8s ease forwards;
-  --animate-slide-left: slideLeft 1s ease forwards;
-  --animate-draw-line: drawLine 1s ease forwards;
-  --animate-pulse-dot: pulseDot 1.5s infinite;
-
-  --font-display: "Cormorant Garamond", serif;
-  --font-body: "Mona Sans", sans-serif;
 }
 
+/* Fade In Up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
- @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
+/* Slide In Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-        @keyframes fade-in-down {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
+/* Slide In Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-        @keyframes slide-in-left {
-          from {
-            opacity: 0;
-            transform: translateX(-40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
+/* =============================
+   ANIMATION CLASSES
+   ============================= */
 
-        @keyframes slide-in-right {
-          from {
-            opacity: 0;
-            transform: translateX(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
 
-        @keyframes slide-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
+.animate-fade-in-up {
+  animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
+.animate-slide-in-left {
+  animation: slideInLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
-        .animate-fade-in-up {
-          animation: fade-in-up 1s ease-out;
-        }
-
-        .animate-fade-in-up-delayed {
-          animation: fade-in-up 1s ease-out 0.3s both;
-        }
-
-        .animate-fade-in-down {
-          animation: fade-in-down 0.4s ease-out;
-        }
-
-        .animate-slide-in-left {
-          animation: slide-in-left 0.8s ease-out;
-        }
-
-        .animate-slide-in-right {
-          animation: slide-in-right 0.8s ease-out;
-        }
-
-        .animate-slide-in-up {
-          animation: slide-in-up 0.6s ease-out;
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out;
-        }
-
-        .animate-fade-in-delayed {
-          animation: fade-in 0.8s ease-out 0.2s both;
-        }
-        /* Add these styles to your existing globals.css file (after your existing animations) */
+.animate-slide-in-right {
+  animation: slideInRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
 /* =============================
    SCROLLBAR UTILITIES
@@ -173,8 +103,8 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Smooth scrolling */
@@ -182,7 +112,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Optional: Custom scrollbar styling for the page */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -202,127 +132,7 @@ html {
   background: #555;
 }
 
-/* For horizontal scrollbars */
+/* Horizontal scrollbar */
 ::-webkit-scrollbar:horizontal {
   height: 8px;
 }
-      
-/* Add these animation classes to your global CSS or Tailwind config */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.animate-slide-in-up {
-  animation: slideInUp 0.8s ease-out forwards;
-}
-
-.animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 0.8s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        .animate-fade-in-up {
-          animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .animate-slide-in-left {
-          animation: slideInLeft 0.8s ease-out forwards;
-        }
-
-        .animate-slide-in-right {
-          animation: slideInRight 0.8s ease-out forwards;
-        }

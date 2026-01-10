@@ -81,7 +81,7 @@ const AboutUs = () => {
     <div ref={sectionRef}>
       {/* Button */}
       <div className="about-btn">
-        <HomeButton text="About Us" />
+        <HomeButton text="About us" />
       </div>
 
       {/* Title */}
@@ -93,16 +93,16 @@ const AboutUs = () => {
       </div>
 
       {/* Images */}
-      <div className="max-w-7xl mx-auto px-4 py-20 about-images">
-        <div className="flex flex-col md:flex-row gap-6">
+      <div className="max-w-7xl mx-auto px-4 pt-10 pb-12 about-images">
+        <div className="flex flex-col md:flex-row gap-4">
 
           {/* IMAGE 1 */}
           <div className="relative flex-1 h-[420px] overflow-hidden about-image">
             <Image src={adventure} alt="Adventure" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-6 left-6 text-white max-w-xs about-text">
-              <h3 className="text-2xl font-bold">Adventure</h3>
-              <p className="text-sm text-gray-200 mt-1">
+              <h3 className="text-2xl ">Adventure</h3>
+              <p className="text-sm text-gray-200 mt-1 font-body font-extralight">
                 For those who never stop exploring
               </p>
             </div>
@@ -113,8 +113,8 @@ const AboutUs = () => {
             <Image src={precision} alt="Precision" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-6 left-6 text-white max-w-xs about-text">
-              <h3 className="text-2xl font-bold">Precision</h3>
-              <p className="text-sm text-gray-200 mt-1">
+              <h3 className="text-2xl">Precision</h3>
+              <p className="text-sm text-gray-200 mt-1 font-body font-extralight">
                 Powered by reliable world-time <br /> engineering
               </p>
             </div>
@@ -122,12 +122,12 @@ const AboutUs = () => {
         </div>
 
         {/* IMAGE 3 */}
-        <div className="relative h-[420px] mt-6 overflow-hidden about-image">
+        <div className="relative h-[420px] mt-4 overflow-hidden about-image">
           <Image src={culture} alt="Culture" fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
           <div className="absolute bottom-6 left-6 text-white max-w-xs about-text">
-            <h3 className="text-2xl font-bold">Culture</h3>
-            <p className="text-sm text-gray-200 mt-1">
+            <h3 className="text-2xl">Culture</h3>
+            <p className="text-sm text-gray-200 mt-1 font-body font-extralight">
               Celebrating eight iconic beaches <br /> across the globe
             </p>
           </div>
