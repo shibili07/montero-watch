@@ -6,10 +6,10 @@ import Link from "next/link";
 import { Mail } from "lucide-react";
 import Blue1 from "@/public/images/BlueWatch/productBlue1.png";
 import Blue2 from "@/public/images/BlueWatch/productBlue2.png";
-import Green2 from "@/public/images/GreenWatch/productGreen2.png";
 import Blue3 from "@/public/images/BlueWatch/productBlue3.png";
 import Blue4 from "@/public/images/BlueWatch/productBlue4.jpg";
 import Green6 from "@/public/images/GreenWatch/productGreen6.png";
+import White from "@/public/images/BlueWatch/whiteShadow.png";
 
 import Navbar from "@/app/components/navBar/NavBar";
 import Footer from "@/app/components/home/Footer/Footer";
@@ -74,82 +74,81 @@ const Page = () => {
       </section>
 
       {/* ================= MONTERO EDITION SECTION ================= */}
-       <section className="relative w-full min-h-fit bg-gray-50 flex items-center justify-center py-4 sm:py-5 lg:py-6">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                <div className="text-center">
-                  {/* Title */}
-                  <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-cormorant text-gray-900 mb-2 sm:mb-3">
-                    Montero English Edition
-                  </h2>
-      
-                  {/* Watch Image */}
-                  <div className="relative mb-1 sm:mb-2">
-                    <div
-                      className="relative transform scale-200 z-10 w-full max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto h-[160px] sm:h-[240px] md:h-[300px] lg:h-[360px]">
-                      <Image
-                        src={Blue2}
-                        alt="Montero Arabic Edition Watch"
-                        fill
-                        priority
-                        className="object-contain"
-                      />
-                    </div>
-                  </div>
-      
-                  {/* Features Grid */}
-                  <div className="max-w-6xl mx-auto mb-3 sm:mb-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-3 place-items-center">
-                      {[
-                        "Sapphire Crystal",
-                        "Seiko NH34 GMT Movement",
-                        "5 ATM Water Resistance",
-                        "Stainless Steel Case",
-                        "World-Time Beach Concept",
-                      ].map((item) => (
-                        <div key={item} className="flex items-center gap-2">
-                          <span className="w-2 h-2 bg-[#2596be] rounded-full flex-shrink-0"></span>
-                          <p className="text-gray-700 text-xs sm:text-sm text-center">
-                            {item}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-      
-                  {/* Additional Features */}
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4 px-4">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-[#2596be] rounded-full"></span>
-                      <p className="text-gray-700 text-xs sm:text-sm text-center">
-                        Sapphire crystal for durability
-                      </p>
-                    </div>
-      
-                    <div className="w-2 h-2 bg-[#2596be] rounded-full hidden sm:block"></div>
-      
+      <section className="relative w-full min-h-fit bg-gray-50 flex items-center justify-center py-4 sm:py-5 lg:py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="text-center">
+            {/* Title */}
+            <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-cormorant text-gray-900 mb-2 sm:mb-3">
+              Montero English Edition
+            </h2>
+
+            {/* Watch Image */}
+            <div className="relative mb-1 sm:mb-2">
+              <div className="relative transform scale-200 z-10 w-full max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto h-[160px] sm:h-[240px] md:h-[300px] lg:h-[360px]">
+                <Image
+                  src={Blue2}
+                  alt="Montero Arabic Edition Watch"
+                  fill
+                  priority
+                  className="object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Features Grid */}
+            <div className="max-w-6xl mx-auto mb-3 sm:mb-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-3 place-items-center">
+                {[
+                  "Sapphire Crystal",
+                  "Seiko NH34 GMT Movement",
+                  "5 ATM Water Resistance",
+                  "Stainless Steel Case",
+                  "World-Time Beach Concept",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-[#2596be] rounded-full flex-shrink-0"></span>
                     <p className="text-gray-700 text-xs sm:text-sm text-center">
-                      GMT function for global synchrony
+                      {item}
                     </p>
                   </div>
-      
-                  {/* Order Button */}
-                  <Link href="/order">
-                    <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
-                      <span className="text-xl">₹</span>
-                      <span>859 Order Now</span>
-                    </button>
-                  </Link>
-                  <br />
-      
-                  {/* Limited Edition Badge */}
-                  <div className="inline-flex items-center gap-3 mt-2">
-                    <span className="px-3 py-1 text-xs tracking-widest font-semibold text-red-700 border border-red-600 uppercase">
-                      Limited Edition
-                    </span>
-                  </div>
-                </div>
+                ))}
               </div>
-            </section>
+            </div>
+
+            {/* Additional Features */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4 px-4">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-[#2596be] rounded-full"></span>
+                <p className="text-gray-700 text-xs sm:text-sm text-center">
+                  Sapphire crystal for durability
+                </p>
+              </div>
+
+              <div className="w-2 h-2 bg-[#2596be] rounded-full hidden sm:block"></div>
+
+              <p className="text-gray-700 text-xs sm:text-sm text-center">
+                GMT function for global synchrony
+              </p>
+            </div>
+
+            {/* Order Button */}
+            <Link href="/order">
+              <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
+                <span className="text-xl">₹</span>
+                <span>859 Order Now</span>
+              </button>
+            </Link>
+            <br />
+
+            {/* Limited Edition Badge */}
+            <div className="inline-flex items-center gap-3 mt-2">
+              <span className="px-3 py-1 text-xs tracking-widest font-semibold text-red-700 border border-red-600 uppercase">
+                Limited Edition
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ================= TECHNICAL SPECIFICATIONS SECTION ================= */}
       <section className="bg-white py-12 sm:py-16 lg:py-24 relative overflow-hidden">
@@ -268,6 +267,20 @@ const Page = () => {
               />
             </div>
           </div>
+        </div>
+        <div className="flex justify-end">
+          <span className="inline-block w-48 h-48 mr-44 ml-12 relative top-4 overflow-hidden">
+            <Image
+              src={White}
+              alt="New Watch"
+              fill
+              priority
+              className="object-contain rotate-[0.5deg] scale-110"
+            />
+
+            {/* STRONG TOP fade */}
+            <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-transparent via-white/70 to-white"></span>
+          </span>
         </div>
       </section>
 
