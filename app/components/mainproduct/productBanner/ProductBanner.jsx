@@ -37,7 +37,7 @@ function ProductBanner() {
         className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
           isSwapped ? "opacity-0" : "opacity-100"
         }`}
-        style={{ backgroundImage: "url('/images/Home/Bg.png')" }}
+        style={{ backgroundImage: "url('/images/Home/Bg2.png')" }}
       />
 
       {/* BACKGROUND IMAGE - Green */}
