@@ -18,3 +18,8 @@ export const checkSession = async () => {
     const { data } = await api.post("/refresh");
     return data;
 };
+
+export const verifyEmail = async (token) => {
+    const { data } = await api.get(`/verify-email/${token}`);
+    return data;
+};

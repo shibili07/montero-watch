@@ -24,13 +24,13 @@ export default function SignupPage() {
 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email.trim()) {
-            errors.email = "Email is required";
+            errors.email = "Email is required ";
         } else if (!emailRegex.test(email)) {
             errors.email = "Invalid email format";
         }
 
         if (!password) {
-            errors.password = "Password is required";
+            errors.password = "Password is required ";
         } else if (password.length < 6) {
             errors.password = "Password must be at least 6 characters";
         }
@@ -52,13 +52,13 @@ export default function SignupPage() {
             const response = await register({ name, email, password });
 
             console.log("✅ Register response:", response);
-            toast.success("Registration successful!");
+            toast.success("Account created successfully. Please check your email for verification.");
 
             // optional: log specific fields if backend sends them
             console.log("Message:", response?.message);
             console.log("User:", response?.user);
 
-            router.push("/login");
+            router.push("/signup/verify");
         } catch (err) {
             console.error("❌ Register error:", err);
             const msg = err?.response?.data?.message || err?.message || "Registration failed";
@@ -99,7 +99,7 @@ export default function SignupPage() {
                         </p>
                     </header>
 
-                  
+
 
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         {/* Name Input */}
@@ -167,10 +167,16 @@ export default function SignupPage() {
                         </button>
                     </form>
 
-                    <div className="mt-6 text-center lg:text-left">
-                        <Link href="/login" className="monaSans text-sm text-neutral-600 hover:text-neutral-900 transition-colors">
-                            Already have an account? Sign In
-                        </Link>
+                    <div className="mt-12 pt-8 border-t border-neutral-100 text-center lg:text-left">
+                        <p className="monaSans text-sm text-neutral-500 tracking-tight">
+                            Already have an account?{" "}
+                            <Link
+                                href="/login"
+                                className="text-neutral-900  hover:text-neutral-600 transition-colors underline-offset-4 hover:underline"
+                            >
+                                Sign In
+                            </Link>
+                        </p>
                     </div>
 
                     <footer className="mt-10 text-center space-y-8">
