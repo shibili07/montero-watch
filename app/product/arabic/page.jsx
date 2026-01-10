@@ -11,12 +11,20 @@ import Green3 from "@/public/images/GreenWatch/productGreen3.png";
 import Green6 from "@/public/images/GreenWatch/productGreen6.png";
 import Green7 from "@/public/images/GreenWatch/productGreen7.jpg";
 
+import { useRouter } from "next/navigation";
 import Navbar from "@/app/components/navBar/NavBar";
 import Footer from "@/app/components/home/Footer/Footer";
 
 const Page = () => {
+  const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
   const [open, setOpen] = useState(null);
+
+  const ARABIC_PRODUCT_ID = "696294b5d2b02c0550d276d1";
+
+  const handlePreOrder = () => {
+    router.push(`/order?productId=${ARABIC_PRODUCT_ID}`);
+  };
 
   const faqs = [
     "Do the watches come with a warranty?",
@@ -53,6 +61,7 @@ const Page = () => {
               <button
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
+                onClick={handlePreOrder}
                 className="bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-emerald-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Pre-Order Now
@@ -159,7 +168,10 @@ const Page = () => {
               </div>
 
               {/* Order Button */}
-              <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
+              <button
+                onClick={handlePreOrder}
+                className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2"
+              >
                 <span className="text-xl">₽</span>
                 <span>859 Order Now</span>
               </button>
@@ -513,9 +525,8 @@ function ScrollAnimation({ children, animationClass, delay = 0 }) {
   return (
     <div
       ref={ref}
-      className={`transition-opacity ${
-        isVisible ? animationClass : "opacity-0"
-      }`}
+      className={`transition-opacity ${isVisible ? animationClass : "opacity-0"
+        }`}
     >
       {children}
     </div>
