@@ -10,7 +10,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useAuth();
+  const { login, googleLogin } = useAuth();
   const [error, setError] = useState("");
   const [fieldErrors, setFieldErrors] = useState({});
 
@@ -55,6 +55,7 @@ export default function LoginPage() {
               src={img}
               alt="Montero Watch Premium Display"
               fill
+              sizes="(max-width: 1024px) 100vw, 500px"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               priority
             />
@@ -180,7 +181,10 @@ export default function LoginPage() {
             </div>
 
             <div className="flex items-center justify-center gap-4">
-              <button className="flex-1 flex items-center justify-center border border-neutral-200 py-3.5 hover:bg-neutral-50 transition-all duration-300 rounded-sm">
+              <button
+                onClick={googleLogin}
+                className="flex-1 flex items-center justify-center border border-neutral-200 py-3.5 hover:bg-neutral-50 transition-all duration-300 rounded-sm"
+              >
                 <svg width="20" height="20" viewBox="0 0 48 48">
                   <path
                     fill="#EA4335"

@@ -23,3 +23,7 @@ export const verifyEmail = async (token) => {
     const { data } = await api.get(`/auth/verify-email/${token}`);
     return data;
 };
+export const getProfile = async () => {
+    const { data } = await api.get("/auth/me");
+    return data;
+};

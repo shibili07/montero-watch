@@ -99,7 +99,7 @@ const Navbar = () => {
 
           {/* LOGO */}
           <Link href="/" className="flex-shrink-0">
-            <Image src={Logo} alt="Logo" width={190} height={80} priority />
+            <Image src={Logo} alt="Logo" width={190} height={80} style={{ height: 'auto' }} priority />
           </Link>
 
           {/* RIGHT SIDE */}
@@ -171,8 +171,8 @@ const Navbar = () => {
             {/* SIGN IN */}
             {!user && (
               <Link
-                href="/signup"
-                className={`hidden sm:block border border-black rounded-full px-6 py-[6px] text-[13px] font-light transition ${pathname === "/signup"
+                href="/login"
+                className={`hidden sm:block border border-black rounded-full px-6 py-[6px] text-[13px] font-light transition ${pathname === "/login"
                   ? "bg-black text-white"
                   : "hover:bg-black hover:text-white"
                   }`}
@@ -190,7 +190,7 @@ const Navbar = () => {
                 className="w-10 h-10 rounded-full overflow-hidden bg-neutral-200"
               >
                 <Image
-                  src={(user && user.profilePic) ? user.profilePic : Avatar}
+                  src={Avatar}
                   alt="User Avatar"
                   width={40}
                   height={40}
@@ -264,7 +264,7 @@ const Navbar = () => {
 
           {!user && (
             <Link
-              href="/signup"
+              href="/login"
               onClick={() => setIsMobileMenuOpen(false)}
               className="mt-4 text-center border border-black rounded-full py-2 hover:bg-black hover:text-white"
             >

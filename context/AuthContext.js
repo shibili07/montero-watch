@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
         } catch (error) {
             throw error;
         }
-    };
+    };  
 
     const logout = async () => {
         try {
@@ -62,8 +62,16 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    const googleLogin = () => {
+        window.location.href = `${api.defaults.baseURL}/auth/google`;
+    };
+
+    const setAccessToken = (token) => {
+        api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    };
+
     return (
-        <AuthContext.Provider value={{ user, login, register, logout, loading }}>
+        <AuthContext.Provider value={{ user, login, register, logout, loading, googleLogin, setAccessToken, setUser }}>
             {children}
         </AuthContext.Provider>
     );
