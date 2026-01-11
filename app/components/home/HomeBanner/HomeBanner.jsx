@@ -22,7 +22,7 @@ export default function HomeBanner() {
   const rightTextRef = useRef(null);
   const leftFeatureRef = useRef(null);
   const watchRef = useRef(null);
-  const leftArrowRef = useRef(null);   
+  const leftArrowRef = useRef(null);
   const rightArrowRef = useRef(null);
 
   useEffect(() => {
@@ -123,7 +123,12 @@ export default function HomeBanner() {
       className="relative min-h-screen overflow-hidden text-white"
     >
       {/* BACKGROUND */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#004770] via-[#0C2636] to-[#000106]" />
+    {/* Background */}
+<div className="absolute inset-0 bg-gradient-to-br from-[#004770] via-[#0C2636] to-[#000106]" />
+
+{/* Reduced bottom fade */}
+<div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent" />
+
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 pt-24 lg:pt-32 flex">
@@ -179,18 +184,17 @@ export default function HomeBanner() {
       </div>
 
       {/* RIGHT ARROW */}
-     <div
-  ref={rightArrowRef}
-  className="absolute bottom-[24%] left-[20%] hidden lg:block z-10 w-24 h-24 overflow-visible"
->
-  <Image
-    src={RightArrow}
-    alt="Right Arrow"
-    fill
-    className="object-contain scale-[2.8]"
-  />
-</div>
-
+      <div
+        ref={rightArrowRef}
+        className="absolute bottom-[24%] left-[50%] hidden lg:block z-10 w-24 h-24 overflow-visible"
+      >
+        <Image
+          src={RightArrow}
+          alt="Right Arrow"
+          fill
+          className="object-contain scale-[2.8]"
+        />
+      </div>
 
       {/* WATCH */}
       <div
@@ -208,7 +212,7 @@ export default function HomeBanner() {
       {/* LEFT FEATURE */}
       <div
         ref={leftFeatureRef}
-        className="absolute bottom-[20%] left-[10%] hidden lg:block z-10 max-w-xs"
+        className="absolute bottom-[20%] left-[38%] hidden lg:block z-10 max-w-xs"
       >
         <h4 className="font-semibold">Elegant Timekeeping</h4>
         <p className="text-sm text-gray-300">
@@ -218,4 +222,3 @@ export default function HomeBanner() {
     </section>
   );
 }
-  
