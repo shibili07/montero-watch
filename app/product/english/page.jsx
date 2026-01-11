@@ -9,7 +9,7 @@ import Blue2 from "@/public/images/BlueWatch/productBlue2.png";
 import Blue3 from "@/public/images/BlueWatch/productBlue3.png";
 import Blue4 from "@/public/images/BlueWatch/productBlue4.jpg";
 import Green6 from "@/public/images/GreenWatch/productGreen6.png";
-
+import newCurrency from "@/public/images/dbff981dfc9f1a8358f03cc8ee71583a164e6ffc.png"
 import Navbar from "@/app/components/navBar/NavBar";
 import Footer from "@/app/components/home/Footer/Footer";
 
@@ -85,7 +85,7 @@ const Page = () => {
             </h2>
 
             {/* Watch Image */}
-            <div className="relative mb-1 sm:mb-2">
+            <div className="relative mb-1 sm:mb-2 overflow-hidden">
               <div className="relative transform scale-200 z-10 w-full max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto h-[160px] sm:h-[240px] md:h-[300px] lg:h-[360px]">
                 <Image
                   src={Blue2}
@@ -133,13 +133,21 @@ const Page = () => {
               </p>
             </div>
 
-            {/* Order Button */}
-            <Link href="/order">
-              <button className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2">
-                <span className="text-xl">₹</span>
-                <span>859 Order Now</span>
-              </button>
-            </Link>
+              {/* Order Button */}
+              <Link href="/order" className="inline-block">
+                <button className="bg-black text-white px-6 sm:px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-2 min-h-[44px] min-w-[140px]">
+                  <div className="relative w-4 h-4 sm:w-5 sm:h-5">
+                    <Image
+                      src={newCurrency}
+                      alt="Currency Symbol"
+                      fill
+                      className="object-contain"
+                      sizes="20px"
+                    />
+                  </div>
+                  <span>859 Order Now</span>
+                </button>
+              </Link>
             <br />
 
             {/* Limited Edition Badge */}
