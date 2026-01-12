@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, Suspense } from "react";
+import { useEffect, Suspense, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useAuth } from "../../context/AuthContext";
 import { getProfile } from "../../actions/auth";
@@ -10,11 +10,13 @@ function AuthSuccessContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const { setAccessToken, setUser } = useAuth();
+    const triggered = useRef(false);
 
     useEffect(() => {
         const token = searchParams.get("token");
 
-        if (token) {
+        if (token && !triggered.current) {
+            triggered.current = true;
             const completeLogin = async () => {
                 try {
                     // Set the token for subsequent requests
@@ -34,7 +36,7 @@ function AuthSuccessContent() {
             };
 
             completeLogin();
-        } else {
+        } else if (!token) {
             router.push("/login");
         }
     }, [searchParams, router, setAccessToken, setUser]);
