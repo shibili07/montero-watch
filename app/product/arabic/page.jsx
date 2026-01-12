@@ -12,12 +12,21 @@ import Green6 from "@/public/images/GreenWatch/productGreen6.png";
 import Green7 from "@/public/images/GreenWatch/productGreen7.jpg";
 import newCurrency from '@/public/images/newSymbole.png'
 
+import { useRouter } from "next/navigation";
 import Navbar from "@/app/components/navBar/NavBar";
 import Footer from "@/app/components/home/Footer/Footer";
 
 const Page = () => {
+  const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
   const [open, setOpen] = useState(null);
+
+  // Integrated logic from Tail for Product ID
+  const ARABIC_PRODUCT_ID = "696294b5d2b02c0550d276d1";
+
+  const handlePreOrder = () => {
+    router.push(`/order?productId=${ARABIC_PRODUCT_ID}`);
+  };
 
   const faqs = [
     "Do the watches come with a warranty?",
@@ -26,12 +35,10 @@ const Page = () => {
     "How can I place an order?",
   ];
 
-
-
   return (
     <>
       <Navbar />
-      
+
       {/* First Section - Hero */}
       <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-[#1a5647] via-[#0f3d30] to-[#0a2920]">
         {/* Decorative Elements - Mobile Optimized */}
@@ -52,10 +59,10 @@ const Page = () => {
               <p className="text-sm font-body font-extralight sm:text-base lg:text-lg text-white/90 mb-4 sm:mb-6 md:mb-8 leading-relaxed mobile-text max-w-2xl mx-auto lg:mx-0">
                 Crafted for explorers, dreamers, and lovers of the world s most iconic beaches
               </p>
-              
-              {/* Mobile-only Order Button */}
+
+              {/* Mobile-only Order Button - HEAD Style, Integrated with Product ID */}
               <div className="lg:hidden mt-4">
-                <Link href="/order" className="inline-block w-full max-w-xs mx-auto">
+                <Link href={`/order?productId=${ARABIC_PRODUCT_ID}`} className="inline-block w-full max-w-xs mx-auto">
                   <button className="bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors w-full flex items-center justify-center gap-2 min-h-[44px]">
                     <div className="relative w-4 h-4 sm:w-5 sm:h-5">
                       <Image
@@ -106,7 +113,7 @@ const Page = () => {
             {/* Watch Image */}
             <div className="relative mb-3 sm:mb-4 overflow-hidden">
               <div
-               className="relative transform scale-200 z-10 w-full max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto h-[160px] sm:h-[240px] md:h-[300px] lg:h-[360px]"
+                className="relative transform scale-200 z-10 w-full max-w-sm sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto h-[160px] sm:h-[240px] md:h-[300px] lg:h-[360px]"
               >
                 <Image
                   src={Green2}
@@ -155,12 +162,12 @@ const Page = () => {
               </p>
             </div>
 
-            {/* Order Button */}
-            <Link href="/order">
+            {/* Order Button - HEAD Style, Integrated with Product ID */}
+            <Link href={`/order?productId=${ARABIC_PRODUCT_ID}`}>
               <button className="bg-black text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-medium hover:bg-gray-800 transition-colors inline-flex items-center gap-2 justify-center min-h-[44px]">
                 <div className="relative w-4 h-4 sm:w-5 sm:h-5">
-                  <Image 
-                    src={newcurrency} 
+                  <Image
+                    src={newcurrency}
                     alt="Currency Symbol"
                     fill
                     className="object-contain"
@@ -451,10 +458,10 @@ const Page = () => {
               iconic beaches. Now with Arabic numerals for the Middle Eastern
               market.
             </p>
-            
+
             {/* Mobile-only CTA */}
             <div className="lg:hidden pt-4">
-              <Link href="/order" className="inline-block w-full">
+              <Link href={`/order?productId=${ARABIC_PRODUCT_ID}`} className="inline-block w-full">
                 <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors w-full flex items-center justify-center gap-2 min-h-[44px]">
                   <div className="relative w-4 h-4">
                     <Image
@@ -491,13 +498,13 @@ const Page = () => {
 
               {/* Arrows */}
               <div className="flex items-center gap-4 justify-center lg:justify-start">
-                <button 
+                <button
                   className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors min-w-[44px] min-h-[44px]"
                   aria-label="Previous testimonial"
                 >
                   ←
                 </button>
-                <button 
+                <button
                   className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors min-w-[44px] min-h-[44px]"
                   aria-label="Next testimonial"
                 >
@@ -545,8 +552,8 @@ const Page = () => {
                         {i === 0
                           ? "Ahmed Al-Farsi"
                           : i === 1
-                          ? "Mirana Marci"
-                          : "Sara Khalid"}
+                            ? "Mirana Marci"
+                            : "Sara Khalid"}
                       </p>
                       <p className="text-xs text-gray-500 mobile-small-text">Verified Buyer</p>
                     </div>
@@ -557,7 +564,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Section 7 - FAQ + SUBSCRIBE */}
       <section className="bg-white py-10 sm:py-14 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -602,7 +609,7 @@ const Page = () => {
                   </button>
 
                   {open === i && (
-                    <p 
+                    <p
                       id={`faq-answer-${i}`}
                       className="mt-2 sm:mt-3 lg:mt-4 max-w-md text-xs sm:text-sm text-gray-600 mobile-small-text"
                     >
@@ -657,3 +664,46 @@ const Page = () => {
 };
 
 export default Page;
+
+/* ================= SCROLL ANIMATION COMPONENT ================= */
+function ScrollAnimation({ children, animationClass, delay = 0 }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            setIsVisible(true);
+          }, delay);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "50px",
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [delay]);
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-opacity ${isVisible ? animationClass : "opacity-0"
+        }`}
+    >
+      {children}
+    </div>
+  );
+}
