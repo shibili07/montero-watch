@@ -3,7 +3,8 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { loginUser, registerUser, logoutUser, checkSession } from "../actions/auth";
-import api from "../lib/api"; // Keep api for interceptor setup if needed, or remove if not used directly
+import api from "../lib/api";
+import { toast } from "react-toastify";
 
 const AuthContext = createContext();
 
@@ -12,14 +13,20 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const router = useRouter();
 
+    const initialized = React.useRef(false);
+
     // Load user on mount (try refresh)
     useEffect(() => {
+        if (initialized.current) return;
+        initialized.current = true;
+
         const initSession = async () => {
             try {
                 const data = await checkSession();
                 setUser(data.user);
                 api.defaults.headers.common["Authorization"] = `Bearer ${data.accessToken}`;
             } catch (error) {
+                console.error("Session initialization failed:", error);
                 setUser(null);
             } finally {
                 setLoading(false);
@@ -29,19 +36,20 @@ export const AuthProvider = ({ children }) => {
         initSession();
     }, []);
 
-    const login = async (email, password) => {
+    const login = React.useCallback(async (email, password) => {
         try {
             const data = await loginUser(email, password);
             setUser(data.user);
             api.defaults.headers.common["Authorization"] = `Bearer ${data.accessToken}`;
+            toast.success("Login successful!");
             router.push("/"); // Redirect to home/dashboard
             return data;
         } catch (error) {
             throw error;
         }
-    };
+    }, [router]);
 
-    const register = async (userData) => {
+    const register = React.useCallback(async (userData) => {
         try {
             const data = await registerUser(userData);
             router.push("/login");
@@ -49,9 +57,9 @@ export const AuthProvider = ({ children }) => {
         } catch (error) {
             throw error;
         }
-    };
+    }, [router]);
 
-    const logout = async () => {
+    const logout = React.useCallback(async () => {
         try {
             await logoutUser();
             setUser(null);
@@ -60,22 +68,34 @@ export const AuthProvider = ({ children }) => {
         } catch (error) {
             console.error("Logout failed", error);
         }
-    };
+    }, [router]);
 
-    const googleLogin = () => {
+    const googleLogin = React.useCallback(() => {
         window.location.href = `${api.defaults.baseURL}/auth/google`;
-    };
+    }, []);
 
-    const facebookLogin = () => {
+    const facebookLogin = React.useCallback(() => {
         window.location.href = `${api.defaults.baseURL}/auth/facebook`;
-    };
+    }, []);
 
-    const setAccessToken = (token) => {
+    const setAccessToken = React.useCallback((token) => {
         api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-    };
+    }, []);
+
+    const value = React.useMemo(() => ({
+        user,
+        login,
+        register,
+        logout,
+        loading,
+        googleLogin,
+        facebookLogin,
+        setAccessToken,
+        setUser
+    }), [user, login, register, logout, loading, googleLogin, facebookLogin, setAccessToken]);
 
     return (
-        <AuthContext.Provider value={{ user, login, register, logout, loading, googleLogin, facebookLogin, setAccessToken, setUser }}>
+        <AuthContext.Provider value={value}>
             {children}
         </AuthContext.Provider>
     );

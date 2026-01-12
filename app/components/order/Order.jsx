@@ -432,7 +432,7 @@ function OrderContent() {
                       className="absolute top-3 right-3 sm:top-4 sm:right-4 text-[#9B1111] hover:text-red-600 transition-colors z-10 bg-white rounded-full p-0.5"
                       aria-label="Remove item"
                     >
-                      <IoCloseCircleOutline size={18} className="sm:size-5 md:size-6" />
+                      <IoCloseCircleOutline size={20} className="sm:size-6 md:size-7" />
                     </button>
 
                     <div className="flex gap-3 sm:gap-4">
@@ -465,7 +465,7 @@ function OrderContent() {
                                 sizes="(max-width: 640px) 14px, (max-width: 768px) 16px, 20px"
                               />
                             </div>
-                            <span>{product.salePrice}</span>
+
                           </div>
                         </div>
 
