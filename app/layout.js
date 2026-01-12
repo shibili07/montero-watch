@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals/globals.css";
+import { AuthProvider } from "../context/AuthContext";
+import ToasterProvider from "./components/ToasterProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,8 +46,6 @@ export const metadata = {
   },
 };
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -59,6 +59,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
+        suppressHydrationWarning
         className={`
           ${geistSans.variable}
           ${geistMono.variable}
@@ -67,7 +68,10 @@ export default function RootLayout({ children }) {
           antialiased
         `}
       >
-        {children}
+        <AuthProvider>
+          <ToasterProvider />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
