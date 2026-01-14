@@ -6,7 +6,7 @@ import Footer from '../components/home/Footer/Footer'
 function page() {
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     <Signup/>
     <Footer/>
     </>

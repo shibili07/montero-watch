@@ -75,7 +75,12 @@ const Navbar = () => {
           {/* LEFT MENU */}
           <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              const isActive =
+                pathname === link.href ||
+                pathname.startsWith(`/en${link.href}`) ||
+                pathname.startsWith(`/ar${link.href}`) ||
+                pathname.startsWith(`${link.href}/`);
+
               return (
                 <Link
                   key={link.name}
@@ -92,7 +97,6 @@ const Navbar = () => {
                     {link.name}
                   </span>
 
-                  {/* UNDERLINE */}
                   <span
                     className={`absolute left-0 -bottom-1 h-[1.5px] bg-black transition-all duration-300 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"

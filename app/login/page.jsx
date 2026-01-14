@@ -6,7 +6,7 @@ import Footer from '../components/home/Footer/Footer'
 function page() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <React.Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
         <Loginpage />
       </React.Suspense>
